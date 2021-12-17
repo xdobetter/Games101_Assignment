@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 {
 
     // Change the definition here to change resolution
-    Scene scene(128, 128);
+    Scene scene(1024, 1024);
 
     Material* red = new Material(DIFFUSE, Vector3f(0.0f));
     red->Kd = Vector3f(0.63f, 0.065f, 0.05f);
@@ -33,15 +33,15 @@ int main(int argc, char** argv)
     MeshTriangle light_("../models/cornellbox/light.obj", light);
 
     scene.Add(&floor);
-    scene.Add(&shortbox);
-    scene.Add(&tallbox);
+    //scene.Add(&shortbox);
+    //scene.Add(&tallbox);
     scene.Add(&left);
     scene.Add(&right);
     scene.Add(&light_);
-//    MeshTriangle bunny("../models/bunny/bunny.obj",white);
-//   // MeshTriangle light_("../models/cornellbox/light.obj", light);
-//    scene.Add(&bunny);
-//   // scene.Add(&light_);
+    MeshTriangle bunny("../models/bunny/bunny.obj",white);
+    //MeshTriangle light_("../models/cornellbox/light.obj", light);
+    scene.Add(&bunny);
+    scene.Add(&light_);
     scene.buildBVH();
 
     Renderer r;

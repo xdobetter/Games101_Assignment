@@ -1,4 +1,4 @@
-# Install script for directory: /media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7
+# Install script for directory: /mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

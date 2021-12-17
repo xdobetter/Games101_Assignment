@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/AreaLight.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/AreaLight.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 Light.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Light.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Light.hpp
 global.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/global.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/global.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/BVH.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/BVH.hpp
 atomic
 -
 vector
@@ -24,41 +24,41 @@ memory
 ctime
 -
 Object.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Object.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Object.hpp
 Ray.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Ray.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Ray.hpp
 Bounds3.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Bounds3.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Bounds3.hpp
 Intersection.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Intersection.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Intersection.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Bounds3.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Bounds3.hpp
 Ray.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Ray.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Ray.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 limits
 -
 array
 -
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Intersection.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Intersection.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 Material.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Material.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Material.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Light.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Light.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Material.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Material.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/OBJ_Loader.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/OBJ_Loader.hpp
 optional
 -
 iostream
@@ -72,71 +72,71 @@ fstream
 math.h
 -
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Object.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Object.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 global.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/global.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/global.hpp
 Bounds3.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Bounds3.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Bounds3.hpp
 Ray.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Ray.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Ray.hpp
 Intersection.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Intersection.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Intersection.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Ray.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Ray.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Renderer.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Renderer.hpp
 Scene.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Scene.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Scene.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Scene.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Scene.hpp
 vector
 -
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 Object.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Object.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Object.hpp
 Light.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Light.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Light.hpp
 AreaLight.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/AreaLight.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/AreaLight.hpp
 BVH.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/BVH.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/BVH.hpp
 Ray.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Ray.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Ray.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Sphere.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Sphere.hpp
 Object.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Object.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Object.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 Bounds3.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Bounds3.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Bounds3.hpp
 Material.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Material.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Material.hpp
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Triangle.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Triangle.hpp
 BVH.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/BVH.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/BVH.hpp
 Intersection.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Intersection.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Intersection.hpp
 Material.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Material.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Material.hpp
 OBJ_Loader.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/OBJ_Loader.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/OBJ_Loader.hpp
 Object.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Object.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Object.hpp
 Triangle.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Triangle.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Triangle.hpp
 cassert
 -
 array
 -
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 iostream
 -
 cmath
@@ -144,7 +144,7 @@ cmath
 algorithm
 -
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/global.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/global.hpp
 iostream
 -
 cmath
@@ -152,19 +152,19 @@ cmath
 random
 -
 
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/main.cpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/main.cpp
 Renderer.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Renderer.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Renderer.hpp
 Scene.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Scene.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Scene.hpp
 Triangle.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Triangle.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Triangle.hpp
 Sphere.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Sphere.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Sphere.hpp
 Vector.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/Vector.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/Vector.hpp
 global.hpp
-/media/xdb/ebebad3d-2780-4b37-b59b-e08c879d5e76/Course/games101/PA7-1/PA7/Assignment7/global.hpp
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment7/global.hpp
 chrono
 -
 

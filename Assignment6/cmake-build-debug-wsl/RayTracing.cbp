@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RayTracing"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RayTracing">
+				<Option output="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/RayTracing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 RayTracing"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RayTracing/fast">
+				<Option output="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/RayTracing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 RayTracing/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/AreaLight.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/BVH.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/BVH.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Bounds3.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Intersection.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Light.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Material.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Object.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Ray.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Renderer.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Renderer.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Scene.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Scene.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Sphere.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Triangle.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Vector.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/Vector.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/global.hpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/main.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/PA6/Assignment6/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
