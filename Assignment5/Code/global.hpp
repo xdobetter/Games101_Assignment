@@ -8,12 +8,12 @@
 
 constexpr float kInfinity = std::numeric_limits<float>::max();
 
-inline float clamp(const float& lo, const float& hi, const float& v)
+inline float clamp(const float& lo, const float& hi, const float& v) //????
 {
     return std::max(lo, std::min(hi, v));
 }
 
-inline bool solveQuadratic(const float& a, const float& b, const float& c, float& x0, float& x1)
+inline bool solveQuadratic(const float& a, const float& b, const float& c, float& x0, float& x1) //求解二次方程式，用于球的求交
 {
     float discr = b * b - 4 * a * c;
     if (discr < 0)
@@ -27,11 +27,11 @@ inline bool solveQuadratic(const float& a, const float& b, const float& c, float
         x1 = c / q;
     }
     if (x0 > x1)
-        std::swap(x0, x1);
+        std::swap(x0, x1); //x0<x1
     return true;
 }
 
-enum MaterialType
+enum MaterialType //材质属性
 {
     DIFFUSE_AND_GLOSSY,
     REFLECTION_AND_REFRACTION,
@@ -47,7 +47,7 @@ inline float get_random_float()
     return dist(rng);
 }
 
-inline void UpdateProgress(float progress)
+inline void UpdateProgress(float progress) //进度条
 {
     int barWidth = 70;
 
@@ -62,6 +62,6 @@ inline void UpdateProgress(float progress)
         else
             std::cout << " ";
     }
-    std::cout << "] " << int(progress * 100.0) << " %\r";
+    std::cout << "] " << int(progress * 100.0) << " %\r"; //"/r"换行
     std::cout.flush();
 }

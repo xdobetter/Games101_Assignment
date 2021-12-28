@@ -11,30 +11,47 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f
     // that's specified bt v0, v1 and v2 intersects with the ray (whose
     // origin is *orig* and direction is *dir*)
     // Also don't forget to update tnear, u and v.
-    return false;
+    Vector3f E1=v1-v0;
+    Vector3f E2=v2-v0;
+    Vector3f S=orig-v0;
+    Vector3f S1= crossProduct(dir,E2);
+    Vector3f S2= crossProduct(S,E1);
+    float det= dotProduct(S1,E1);
+
+    u= dotProduct(S1,S)/det;
+    if(u<0||u>1) return false;
+
+    v= dotProduct(S2,dir)/det;
+    if(v<0||u+v>1) return false;
+
+    tnear= dotProduct(S2,E2)/det;
+    if(tnear<0) return false;
+
+
+    return true;
 }
 
 class MeshTriangle : public Object
 {
 public:
-    MeshTriangle(const Vector3f* verts, const uint32_t* vertsIndex, const uint32_t& numTris, const Vector2f* st)
+    MeshTriangle(const Vector3f* verts, const uint32_t* vertsIndex, const uint32_t& numTris, const Vector2f* st) //三角网格的生成
     {
-        uint32_t maxIndex = 0;
+        uint32_t maxIndex = 0;//最大顶点的索引
         for (uint32_t i = 0; i < numTris * 3; ++i)
             if (vertsIndex[i] > maxIndex)
                 maxIndex = vertsIndex[i];
         maxIndex += 1;
-        vertices = std::unique_ptr<Vector3f[]>(new Vector3f[maxIndex]);
-        memcpy(vertices.get(), verts, sizeof(Vector3f) * maxIndex);
+        vertices = std::unique_ptr<Vector3f[]>(new Vector3f[maxIndex]);//
+        memcpy(vertices.get(), verts, sizeof(Vector3f) * maxIndex);//拷贝顶点
         vertexIndex = std::unique_ptr<uint32_t[]>(new uint32_t[numTris * 3]);
-        memcpy(vertexIndex.get(), vertsIndex, sizeof(uint32_t) * numTris * 3);
+        memcpy(vertexIndex.get(), vertsIndex, sizeof(uint32_t) * numTris * 3);//拷贝顶点索引
         numTriangles = numTris;
-        stCoordinates = std::unique_ptr<Vector2f[]>(new Vector2f[maxIndex]);
-        memcpy(stCoordinates.get(), st, sizeof(Vector2f) * maxIndex);
+        stCoordinates = std::unique_ptr<Vector2f[]>(new Vector2f[maxIndex]);//
+        memcpy(stCoordinates.get(), st, sizeof(Vector2f) * maxIndex);//???
     }
 
     bool intersect(const Vector3f& orig, const Vector3f& dir, float& tnear, uint32_t& index,
-                   Vector2f& uv) const override
+                   Vector2f& uv) const override //这里的UV是在干嘛呢？
     {
         bool intersect = false;
         for (uint32_t k = 0; k < numTriangles; ++k)
@@ -57,7 +74,7 @@ public:
     }
 
     void getSurfaceProperties(const Vector3f&, const Vector3f&, const uint32_t& index, const Vector2f& uv, Vector3f& N,
-                              Vector2f& st) const override
+                              Vector2f& st) const override //获得表面属性
     {
         const Vector3f& v0 = vertices[vertexIndex[index * 3]];
         const Vector3f& v1 = vertices[vertexIndex[index * 3 + 1]];
@@ -68,13 +85,13 @@ public:
         const Vector2f& st0 = stCoordinates[vertexIndex[index * 3]];
         const Vector2f& st1 = stCoordinates[vertexIndex[index * 3 + 1]];
         const Vector2f& st2 = stCoordinates[vertexIndex[index * 3 + 2]];
-        st = st0 * (1 - uv.x - uv.y) + st1 * uv.x + st2 * uv.y;
+        st = st0 * (1 - uv.x - uv.y) + st1 * uv.x + st2 * uv.y;//像是在算它的重心坐标一样
     }
 
-    Vector3f evalDiffuseColor(const Vector2f& st) const override
+    Vector3f evalDiffuseColor(const Vector2f& st) const override //这是干啥的？？？
     {
         float scale = 5;
-        float pattern = (fmodf(st.x * scale, 1) > 0.5) ^ (fmodf(st.y * scale, 1) > 0.5);
+        float pattern = (fmodf(st.x * scale, 1) > 0.5) ^ (fmodf(st.y * scale, 1) > 0.5); //fmodf是啥东西
         return lerp(Vector3f(0.815, 0.235, 0.031), Vector3f(0.937, 0.937, 0.231), pattern);
     }
 

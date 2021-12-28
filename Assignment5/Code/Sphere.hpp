@@ -32,7 +32,7 @@ public:
     }
 
     void getSurfaceProperties(const Vector3f& P, const Vector3f&, const uint32_t&, const Vector2f&,
-                              Vector3f& N, Vector2f&) const override
+                              Vector3f& N, Vector2f&) const override //获得表面属性，这里是获得法向
     {
         N = normalize(P - center);
     }

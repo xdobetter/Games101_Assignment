@@ -88,12 +88,12 @@ public:
     float x, y;
 };
 
-inline Vector3f lerp(const Vector3f& a, const Vector3f& b, const float& t)
+inline Vector3f lerp(const Vector3f& a, const Vector3f& b, const float& t) //线性插值
 {
     return a * (1 - t) + b * t;
 }
 
-inline Vector3f normalize(const Vector3f& v)
+inline Vector3f normalize(const Vector3f& v) //归一化
 {
     float mag2 = v.x * v.x + v.y * v.y + v.z * v.z;
     if (mag2 > 0)
@@ -105,12 +105,12 @@ inline Vector3f normalize(const Vector3f& v)
     return v;
 }
 
-inline float dotProduct(const Vector3f& a, const Vector3f& b)
+inline float dotProduct(const Vector3f& a, const Vector3f& b)//点乘
 {
     return a.x * b.x + a.y * b.y + a.z * b.z;
 }
 
-inline Vector3f crossProduct(const Vector3f& a, const Vector3f& b)
+inline Vector3f crossProduct(const Vector3f& a, const Vector3f& b)//叉乘
 {
     return Vector3f(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
 }

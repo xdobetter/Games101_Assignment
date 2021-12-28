@@ -7,14 +7,14 @@
 inline float deg2rad(const float &deg)
 { return deg * M_PI/180.0; }
 
-// Compute reflection direction
+// Compute reflection direction 反射方向
 Vector3f reflect(const Vector3f &I, const Vector3f &N)
 {
-    return I - 2 * dotProduct(I, N) * N;
+    return I - 2 * dotProduct(I, N) * N; //咋推出来的？？？
 }
 
 // [comment]
-// Compute refraction direction using Snell's law
+// Compute refraction direction using Snell's law //斯涅尔定律
 //
 // We need to handle with care the two possible situations:
 //
@@ -38,13 +38,13 @@ Vector3f refract(const Vector3f &I, const Vector3f &N, const float &ior)
 }
 
 // [comment]
-// Compute Fresnel equation
+// Compute Fresnel equation 菲涅尔方程
 //
-// \param I is the incident view direction
+// \param I is the incident view direction //view???
 //
-// \param N is the normal at the intersection point
+// \param N is the normal at the intersection point //N-法向
 //
-// \param ior is the material refractive index
+// \param ior is the material refractive index //材料折射率
 // [/comment]
 float fresnel(const Vector3f &I, const Vector3f &N, const float &ior)
 {
@@ -75,9 +75,9 @@ float fresnel(const Vector3f &I, const Vector3f &N, const float &ior)
 // \param dir is the ray direction
 // \param objects is the list of objects the scene contains
 // \param[out] tNear contains the distance to the cloesest intersected object.
-// \param[out] index stores the index of the intersect triangle if the interesected object is a mesh.
-// \param[out] uv stores the u and v barycentric coordinates of the intersected point
-// \param[out] *hitObject stores the pointer to the intersected object (used to retrieve material information, etc.)
+// \param[out] index stores the index of the intersect triangle if the interesected object is a mesh. //存储相交的索引
+// \param[out] uv stores the u and v barycentric coordinates of the intersected point //存储重心坐标
+// \param[out] *hitObject stores the pointer to the intersected object (used to retrieve material information, etc.) //存储相交相交对象的指针
 // \param isShadowRay is it a shadow ray. We can return from the function sooner as soon as we have found a hit.
 // [/comment]
 std::optional<hit_payload> trace(
@@ -130,7 +130,7 @@ Vector3f castRay(
     }
 
     Vector3f hitColor = scene.backgroundColor;
-    if (auto payload = trace(orig, dir, scene.get_objects()); payload)
+    if (auto payload = trace(orig, dir, scene.get_objects()); payload) //if里面写这么多
     {
         Vector3f hitPoint = orig + dir * payload->tNear;
         Vector3f N; // normal
@@ -141,12 +141,14 @@ Vector3f castRay(
             {
                 Vector3f reflectionDirection = normalize(reflect(dir, N));
                 Vector3f refractionDirection = normalize(refract(dir, N, payload->hit_obj->ior));
-                Vector3f reflectionRayOrig = (dotProduct(reflectionDirection, N) < 0) ?
-                                             hitPoint - N * scene.epsilon :
-                                             hitPoint + N * scene.epsilon;
-                Vector3f refractionRayOrig = (dotProduct(refractionDirection, N) < 0) ?
-                                             hitPoint - N * scene.epsilon :
-                                             hitPoint + N * scene.epsilon;
+//                Vector3f reflectionRayOrig = (dotProduct(reflectionDirection, N) < 0) ? //内侧，需要向外偏移
+//                                             hitPoint - N * scene.epsilon ://外侧，需要向内偏移
+//                                             hitPoint + N * scene.epsilon;
+//                Vector3f refractionRayOrig = (dotProduct(refractionDirection, N) < 0) ?
+//                                             hitPoint - N * scene.epsilon :
+//                                             hitPoint + N * scene.epsilon;
+                Vector3f reflectionRayOrig = hitPoint + N * scene.epsilon;
+                Vector3f refractionRayOrig = hitPoint + N * scene.epsilon;
                 Vector3f reflectionColor = castRay(reflectionRayOrig, reflectionDirection, scene, depth + 1);
                 Vector3f refractionColor = castRay(refractionRayOrig, refractionDirection, scene, depth + 1);
                 float kr = fresnel(dir, N, payload->hit_obj->ior);
@@ -212,8 +214,8 @@ void Renderer::Render(const Scene& scene)
 {
     std::vector<Vector3f> framebuffer(scene.width * scene.height);
 
-    float scale = std::tan(deg2rad(scene.fov * 0.5f));
-    float imageAspectRatio = scene.width / (float)scene.height;
+    float scale = std::tan(deg2rad(scene.fov * 0.5f)); //
+    float imageAspectRatio = scene.width / (float)scene.height; //屏幕宽高比
 
     // Use this variable as the eye position to start your rays.
     Vector3f eye_pos(0);
@@ -230,6 +232,22 @@ void Renderer::Render(const Scene& scene)
             // Also, don't forget to multiply both of them with the variable *scale*, and
             // x (horizontal) variable with the *imageAspectRatio*            
 
+            //从初始的raster space变化到NDC(Normalize Device Coordinates) space
+            float pixel_ndc_x=(i+0.5)/scene.width;
+            float pixel_ndc_y=(j+0.5)/scene.height;
+
+            //从NDC space 变化到 Screen space
+            float pixel_screen_x=pixel_ndc_x*2-1;
+            float pixel_screen_y=1-pixel_ndc_y*2;
+
+            //从Screen space变化到Camera space
+            float pixel_camera_x=pixel_screen_x*imageAspectRatio*scale;
+            float pixel_camera_y=pixel_screen_y*scale;
+
+            //camera space的坐标即最终的坐标（如果相机没有进行位置变换的化，如果有，需要再乘上变化矩阵）
+            x=pixel_camera_x;
+            y=pixel_camera_y;
+
             Vector3f dir = Vector3f(x, y, -1); // Don't forget to normalize this direction!
             framebuffer[m++] = castRay(eye_pos, dir, scene, 0);
         }
@@ -237,14 +255,14 @@ void Renderer::Render(const Scene& scene)
     }
 
     // save framebuffer to file
-    FILE* fp = fopen("binary.ppm", "wb");
-    (void)fprintf(fp, "P6\n%d %d\n255\n", scene.width, scene.height);
+    FILE* fp = fopen("result.ppm", "wb");
+    (void)fprintf(fp, "P6\n%d %d\n255\n", scene.width, scene.height); //ppm的文件格式
     for (auto i = 0; i < scene.height * scene.width; ++i) {
         static unsigned char color[3];
-        color[0] = (char)(255 * clamp(0, 1, framebuffer[i].x));
+        color[0] = (char)(255 * clamp(0, 1, framebuffer[i].x));//求最小后，再求最大，这是为了防止什么呢？
         color[1] = (char)(255 * clamp(0, 1, framebuffer[i].y));
         color[2] = (char)(255 * clamp(0, 1, framebuffer[i].z));
-        fwrite(color, 1, 3, fp);
+        fwrite(color, sizeof(char), 3, fp);//1代表size，3代表个数，向fp中写入color
     }
     fclose(fp);    
 }
