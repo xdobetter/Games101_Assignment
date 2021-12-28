@@ -18,7 +18,7 @@
 
 ## 三角形求交
 
-![重心坐标系](./img/2.png)
+![重心坐标系](./Img/2.png)
 
 games101的推导
 
@@ -36,8 +36,8 @@ games101的推导
 
 正确结果
 
-![重心坐标系](./img/result_2.png)
-![重心坐标系](./img/result_3.png)
+![重心坐标系](./Img/result_2.png)
+![重心坐标系](./Img/result_3.png)
 
 # Ref
 
