@@ -24,8 +24,7 @@ games101的推导
 
 该推导是怎么来的？
 
-推导见[
-Ray Tracing: Rendering a Triangle](https://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-rendering-a-triangle/moller-trumbore-ray-triangle-intersection)
+推导见[Ray Tracing: Rendering a Triangle](https://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-rendering-a-triangle/moller-trumbore-ray-triangle-intersection)
 
 # Hint
 
@@ -33,35 +32,12 @@ Ray Tracing: Rendering a Triangle](https://www.scratchapixel.com/lessons/3d-basi
 
 隐函数不一定能写为y=f(x)的形式，如x^2+y^2=0。显函数是用y=f(x)表示的函数，左边是一个y右边是x的表达式 比如y=2x+1。隐函数是x和y都混在一起的，比如2x-y+1=0。有些隐函数可以表示成显函数，叫做隐函数显化，但也有些隐函数是不能显化的，比如e^y+xy=1。
 
-
 # Result
 
 正确结果
 
-<table rules="none" align="center">
-	<tr>
-		<td>
-			<center>
-				<img src="./img/result_2.png" width="900" />
-				<br/>
-				<font color="green">result_1</font>
-			</center>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<center>
-				<img src="./img/result_3.png" width="900" />
-				<br/>
-				<font color="pink">result_2</font>
-			</center>
-		</td>
-	</tr>
-</table>
-
-
-
-
+![重心坐标系](./img/result_2.png)
+![重心坐标系](./img/result_3.png)
 
 # Ref
 
