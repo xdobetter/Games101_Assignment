@@ -1,0 +1,3 @@
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment1/Code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment1/Code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment1/Code/cmake-build-debug/CMakeFiles/Rasterizer.dir

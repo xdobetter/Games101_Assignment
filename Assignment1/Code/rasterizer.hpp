@@ -26,15 +26,15 @@ inline Buffers operator&(Buffers a, Buffers b)
     return Buffers((int)a & (int)b);
 }
 
-enum class Primitive
+enum class Primitive //图元
 {
     Line,
     Triangle
 };
 
 /*
- * For the curious : The draw function takes two buffer id's as its arguments.
- * These two structs make sure that if you mix up with their orders, the
+ * For the curious : The draw function takes two buffer id's as its arguments. //对于好奇的人:draw函数将两个缓冲区id作为它的参数。
+ * These two structs make sure that if you mix up with their orders, the //这两个结构确保了如果混淆了它们的顺序，编译器将不会编译它。Aka:类型安全
  * compiler won't compile it. Aka : Type safety
  * */
 struct pos_buf_id
@@ -75,16 +75,16 @@ class rasterizer
     Eigen::Matrix4f view;
     Eigen::Matrix4f projection;
 
-    std::map<int, std::vector<Eigen::Vector3f>> pos_buf;
-    std::map<int, std::vector<Eigen::Vector3i>> ind_buf;
+    std::map<int, std::vector<Eigen::Vector3f>> pos_buf; //每个pos的,buffer
+    std::map<int, std::vector<Eigen::Vector3i>> ind_buf;//每个indice
 
     std::vector<Eigen::Vector3f> frame_buf;
     std::vector<float> depth_buf;
-    int get_index(int x, int y);
+    int get_index(int x, int y); //?
 
     int width, height;
 
     int next_id = 0;
-    int get_next_id() { return next_id++; }
+    int get_next_id() { return next_id++; }//?
 };
 } // namespace rst

@@ -9,23 +9,23 @@
 #include <stdexcept>
 
 
-rst::pos_buf_id rst::rasterizer::load_positions(const std::vector<Eigen::Vector3f> &positions)
+rst::pos_buf_id rst::rasterizer::load_positions(const std::vector<Eigen::Vector3f> &positions)//加载顶点
 {
     auto id = get_next_id();
     pos_buf.emplace(id, positions);
 
-    return {id};
+    return {id};//返回id数
 }
 
-rst::ind_buf_id rst::rasterizer::load_indices(const std::vector<Eigen::Vector3i> &indices)
+rst::ind_buf_id rst::rasterizer::load_indices(const std::vector<Eigen::Vector3i> &indices)//加载面索引
 {
     auto id = get_next_id();
     ind_buf.emplace(id, indices);
 
-    return {id};
+    return {id};//返回
 }
 
-// Bresenham's line drawing algorithm
+// Bresenham's line drawing algorithm 这就是课本上学的
 // Code taken from a stack overflow answer: https://stackoverflow.com/a/16405254
 void rst::rasterizer::draw_line(Eigen::Vector3f begin, Eigen::Vector3f end)
 {
@@ -127,7 +127,7 @@ void rst::rasterizer::draw_line(Eigen::Vector3f begin, Eigen::Vector3f end)
     }
 }
 
-auto to_vec4(const Eigen::Vector3f& v3, float w = 1.0f)
+auto to_vec4(const Eigen::Vector3f& v3, float w = 1.0f)//转化为其次坐标
 {
     return Vector4f(v3.x(), v3.y(), v3.z(), w);
 }
@@ -141,8 +141,8 @@ void rst::rasterizer::draw(rst::pos_buf_id pos_buffer, rst::ind_buf_id ind_buffe
     auto& buf = pos_buf[pos_buffer.pos_id];
     auto& ind = ind_buf[ind_buffer.ind_id];
 
-    float f1 = (100 - 0.1) / 2.0;
-    float f2 = (100 + 0.1) / 2.0;
+    float f1 = (100 - 0.1) / 2.0;//??
+    float f2 = (100 + 0.1) / 2.0;//??
 
     Eigen::Matrix4f mvp = projection * view * model;
     for (auto& i : ind)
