@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Light.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{EBE8A2F5-D51D-3CB3-82E9-4EE0464D90F8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BBB1FA21-8824-302B-9A9A-512AC57A8164}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -16,12 +16,12 @@ class Object
 public:
     Object() {}
     virtual ~Object() {}
-    virtual bool intersect(const Ray& ray) = 0;
+    virtual bool intersect(const Ray& ray) = 0;//纯虚函数
     virtual bool intersect(const Ray& ray, float &, uint32_t &) const = 0;
-    virtual Intersection getIntersection(Ray _ray) = 0;
+    virtual Intersection getIntersection(Ray _ray) = 0;//获取求交信息
     virtual void getSurfaceProperties(const Vector3f &, const Vector3f &, const uint32_t &, const Vector2f &, Vector3f &, Vector2f &) const = 0;
-    virtual Vector3f evalDiffuseColor(const Vector2f &) const =0;
-    virtual Bounds3 getBounds()=0;
+    virtual Vector3f evalDiffuseColor(const Vector2f &) const =0;//计算颜色
+    virtual Bounds3 getBounds()=0;//获取包围盒
 };
 
 

@@ -1,0 +1,10 @@
+^D:\CADCG\SELFSTUDY_COURSE\GAMES101\ASSIGNMENT\GAMES101_ASSIGNMENT\ASSIGNMENT5\CODE\BUILD2\CMAKEFILES\26FB0C6456F1DBA8393A73D817DB0C08\GENERATE.STAMP.RULE
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment5/Code -BD:/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment5/Code/build2 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment5/Code/build2/RayTracing.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

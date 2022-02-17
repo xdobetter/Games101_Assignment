@@ -112,7 +112,7 @@ int main(int argc, const char** argv)
         FILE* fp= fopen(filename.c_str(),"wb");//存储结果
         (void) fprintf(fp,"P6\n%d %d\n 255 \n",width,height);
         for(auto i=0;i<width*height;++i){
-            static unsigned char color[3];
+            static unsigned char    color[3];
             //if(frame_buffer[i].x()||frame_buffer[i].y()||frame_buffer[i].z()){std::cout<<"i= "<<i;}
             color[0]=(char)(255* clamp(0,1,frame_buffer[i].x()));
             color[1]=(char)(255* clamp(0,1, frame_buffer[i].y()));

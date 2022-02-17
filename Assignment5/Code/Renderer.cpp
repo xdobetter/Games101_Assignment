@@ -260,6 +260,7 @@ void Renderer::Render(const Scene& scene)
     for (auto i = 0; i < scene.height * scene.width; ++i) {
         static unsigned char color[3];
         color[0] = (char)(255 * clamp(0, 1, framebuffer[i].x));//求最小后，再求最大，这是为了防止什么呢？
+        //std::cout<<"color[0]="<<int()<<std::endl;
         color[1] = (char)(255 * clamp(0, 1, framebuffer[i].y));
         color[2] = (char)(255 * clamp(0, 1, framebuffer[i].z));
         fwrite(color, sizeof(char), 3, fp);//1代表size，3代表个数，向fp中写入color

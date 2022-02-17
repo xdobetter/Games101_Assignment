@@ -19,34 +19,34 @@ public:
     // setting up options
     int width = 1280;
     int height = 960;
-    double fov = 90;
-    Vector3f backgroundColor = Vector3f(0.235294, 0.67451, 0.843137);
-    int maxDepth = 5;
+    double fov = 90;//fov角度
+    Vector3f backgroundColor = Vector3f(0.235294, 0.67451, 0.843137);//背景颜色
+    int maxDepth = 5;//最大深度
 
     Scene(int w, int h) : width(w), height(h)
     {}
 
-    void Add(Object *object) { objects.push_back(object); }
-    void Add(std::unique_ptr<Light> light) { lights.push_back(std::move(light)); }
+    void Add(Object *object) { objects.push_back(object); }//压入物体
+    void Add(std::unique_ptr<Light> light) { lights.push_back(std::move(light)); }//压入光源
 
     const std::vector<Object*>& get_objects() const { return objects; }
     const std::vector<std::unique_ptr<Light> >&  get_lights() const { return lights; }
     Intersection intersect(const Ray& ray) const;
-    BVHAccel *bvh;
-    void buildBVH();
-    Vector3f castRay(const Ray &ray, int depth) const;
+    BVHAccel *bvh;//bvh
+    void buildBVH();//构建bvh
+    Vector3f castRay(const Ray &ray, int depth) const;//投射光线
     bool trace(const Ray &ray, const std::vector<Object*> &objects, float &tNear, uint32_t &index, Object **hitObject);
     std::tuple<Vector3f, Vector3f> HandleAreaLight(const AreaLight &light, const Vector3f &hitPoint, const Vector3f &N,
                                                    const Vector3f &shadowPointOrig,
                                                    const std::vector<Object *> &objects, uint32_t &index,
-                                                   const Vector3f &dir, float specularExponent);
+                                                   const Vector3f &dir, float specularExponent);//处理面光源
 
     // creating the scene (adding objects and lights)
     std::vector<Object* > objects;
-    std::vector<std::unique_ptr<Light> > lights;
+    std::vector<std::unique_ptr<Light> > lights;//为什么光源这里用了unique_ptr？
 
     // Compute reflection direction
-    Vector3f reflect(const Vector3f &I, const Vector3f &N) const
+    Vector3f reflect(const Vector3f &I, const Vector3f &N) const //反射
     {
         return I - 2 * dotProduct(I, N) * N;
     }
@@ -64,7 +64,7 @@ public:
 // If the ray is outside, you need to make cosi positive cosi = -N.I
 //
 // If the ray is inside, you need to invert the refractive indices and negate the normal N
-    Vector3f refract(const Vector3f &I, const Vector3f &N, const float &ior) const
+    Vector3f refract(const Vector3f &I, const Vector3f &N, const float &ior) const//折射
     {
         float cosi = clamp(-1, 1, dotProduct(I, N));
         float etai = 1, etat = ior;
@@ -86,7 +86,7 @@ public:
 // \param ior is the material refractive index
 //
 // \param[out] kr is the amount of light reflected
-    void fresnel(const Vector3f &I, const Vector3f &N, const float &ior, float &kr) const
+    void fresnel(const Vector3f &I, const Vector3f &N, const float &ior, float &kr) const//菲涅尔项
     {
         float cosi = clamp(-1, 1, dotProduct(I, N));
         float etai = 1, etat = ior;

@@ -25,7 +25,6 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f
     if(v<0||u+v>1) return false;
 
     tnear= dotProduct(S2,E2)/det;
-    if(tnear<0) return false;
 
 
     return true;
@@ -88,11 +87,12 @@ public:
         st = st0 * (1 - uv.x - uv.y) + st1 * uv.x + st2 * uv.y;//像是在算它的重心坐标一样
     }
 
-    Vector3f evalDiffuseColor(const Vector2f& st) const override //这是干啥的？？？
+    Vector3f evalDiffuseColor(const Vector2f& st) const override 
+        //根据重心坐标，进行着色
     {
         float scale = 5;
-        float pattern = (fmodf(st.x * scale, 1) > 0.5) ^ (fmodf(st.y * scale, 1) > 0.5); //fmodf是啥东西
-        return lerp(Vector3f(0.815, 0.235, 0.031), Vector3f(0.937, 0.937, 0.231), pattern);
+        float pattern = (fmodf(st.x * scale, 1) > 0.5) ^ (fmodf(st.y * scale, 1) > 0.5); //fmodf 返回 x / y 的浮点余数
+        return lerp(Vector3f(0.815, 0.235, 0.031), Vector3f(0.937, 0.937, 0.231), pattern);//做了一个线性混合
     }
 
     std::unique_ptr<Vector3f[]> vertices;

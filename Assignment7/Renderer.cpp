@@ -18,7 +18,7 @@ void Renderer::Render(const Scene& scene)
 {
     std::vector<Vector3f> framebuffer(scene.width * scene.height);
 
-    float scale = tan(deg2rad(scene.fov * 0.5));//?
+    float scale = tan(deg2rad(scene.fov * 0.5));//
     float imageAspectRatio = scene.width / (float)scene.height;
     Vector3f eye_pos(278, 273, -800);//眼睛的位置&摄像机的位置
     int m = 0;

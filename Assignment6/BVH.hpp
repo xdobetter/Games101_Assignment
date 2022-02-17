@@ -28,17 +28,17 @@ public:
     enum class SplitMethod { NAIVE, SAH };
 
     // BVHAccel Public Methods
-    BVHAccel(std::vector<Object*> p, int maxPrimsInNode = 1, SplitMethod splitMethod = SplitMethod::NAIVE);
-    Bounds3 WorldBound() const;
+    BVHAccel(std::vector<Object*> p, int maxPrimsInNode = 1, SplitMethod splitMethod = SplitMethod::NAIVE);//默认为Naive方法
+    Bounds3 WorldBound() const;//
     ~BVHAccel();
 
-    Intersection Intersect(const Ray &ray) const;
-    Intersection getIntersection(BVHBuildNode* node, const Ray& ray)const;
-    bool IntersectP(const Ray &ray) const;
+    Intersection Intersect(const Ray &ray) const;//?
+    Intersection getIntersection(BVHBuildNode* node, const Ray& ray)const;//?
+    bool IntersectP(const Ray &ray) const;//?
     BVHBuildNode* root;
 
     // BVHAccel Private Methods
-    BVHBuildNode* recursiveBuild(std::vector<Object*>objects);
+    BVHBuildNode* recursiveBuild(std::vector<Object*>objects);//?
 
     // BVHAccel Private Data
     const int maxPrimsInNode;

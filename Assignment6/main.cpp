@@ -15,15 +15,15 @@ int main(int argc, char** argv)
 
     MeshTriangle bunny("../models/bunny/bunny.obj");
 
-    scene.Add(&bunny);
-    scene.Add(std::make_unique<Light>(Vector3f(-20, 70, 20), 1));
+    scene.Add(&bunny);//加入物体
+    scene.Add(std::make_unique<Light>(Vector3f(-20, 70, 20), 1));//加入光源
     scene.Add(std::make_unique<Light>(Vector3f(20, 70, 20), 1));
-    scene.buildBVH();
+    scene.buildBVH();//构建BVH
 
-    Renderer r;
+    Renderer r;//渲染器  
 
     auto start = std::chrono::system_clock::now();
-    r.Render(scene);
+    r.Render(scene);//绘制
     auto stop = std::chrono::system_clock::now();
 
     std::cout << "Render complete: \n";

@@ -9,6 +9,7 @@
 #include <cassert>
 #include <array>
 
+//该函数只是判断是否有交点，但是并不计算出具体的交点
 bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1,
                           const Vector3f& v2, const Vector3f& orig,
                           const Vector3f& dir, float& tnear, float& u, float& v)
@@ -45,7 +46,7 @@ public:
     Vector3f v0, v1, v2; // vertices A, B ,C , counter-clockwise order
     Vector3f e1, e2;     // 2 edges v1-v0, v2-v0;
     Vector3f t0, t1, t2; // texture coords
-    Vector3f normal;
+    Vector3f normal;//法向
     Material* m;
 
     Triangle(Vector3f _v0, Vector3f _v1, Vector3f _v2, Material* _m = nullptr)
@@ -67,6 +68,7 @@ public:
         N = normal;
         //        throw std::runtime_error("triangle::getSurfaceProperties not
         //        implemented.");
+        //在上一节中，这里有进行实现
     }
     Vector3f evalDiffuseColor(const Vector2f&) const override;
     Bounds3 getBounds() override;
@@ -78,7 +80,7 @@ public:
     MeshTriangle(const std::string& filename)
     {
         objl::Loader loader;
-        loader.LoadFile(filename);
+        loader.LoadFile(filename);//加载图元
 
         assert(loader.LoadedMeshes.size() == 1);
         auto mesh = loader.LoadedMeshes[0];
@@ -117,7 +119,7 @@ public:
                                    face_vertices[2], new_mat);
         }
 
-        bounding_box = Bounds3(min_vert, max_vert);
+        bounding_box = Bounds3(min_vert, max_vert);//构建出最大的bbox
 
         std::vector<Object*> ptrs;
         for (auto& tri : triangles)
@@ -232,8 +234,9 @@ inline Intersection Triangle::getIntersection(Ray ray)
     t_tmp = dotProduct(e2, qvec) * det_inv;
 
     // TODO find ray triangle intersection
-
-
+    //这里的含义是当知道光线与三角形有交点后，如何计算出该交点的值！
+    if(t_tmp<inter)
+    inter.coords = (1 - u - v) * v0 + v1 + v2;
 
 
     return inter;

@@ -24,18 +24,32 @@ void Renderer::Render(const Scene& scene)
     int m = 0;
     for (uint32_t j = 0; j < scene.height; ++j) {
         for (uint32_t i = 0; i < scene.width; ++i) {
-            // generate primary ray direction
-            float x = (2 * (i + 0.5) / (float)scene.width - 1) *
-                      imageAspectRatio * scale;
+			// generate primary ray direction
+			float x;
+			float y;
+			// TODO: Find the x and y positions of the current pixel to get the direction
+			// vector that passes through it.
+			// Also, don't forget to multiply both of them with the variable *scale*, and
+			// x (horizontal) variable with the *imageAspectRatio*            
 
-            float y = (1 - 2 * (j + 0.5) / (float)scene.height) * scale;
-            // TODO: Find the x and y positions of the current pixel to get the
-            // direction
-            //  vector that passes through it.
-            // Also, don't forget to multiply both of them with the variable
-            // *scale*, and x (horizontal) variable with the *imageAspectRatio*
-            // Don't forget to normalize this direction!
+			//从初始的raster space变化到NDC(Normalize Device Coordinates) space
+			float pixel_ndc_x = (i + 0.5) / scene.width;
+			float pixel_ndc_y = (j + 0.5) / scene.height;
 
+			//从NDC space 变化到 Screen space
+			float pixel_screen_x = pixel_ndc_x * 2 - 1;
+			float pixel_screen_y = 1 - pixel_ndc_y * 2;
+
+			//从Screen space变化到Camera space
+			float pixel_camera_x = pixel_screen_x * imageAspectRatio * scale;
+			float pixel_camera_y = pixel_screen_y * scale;
+
+			//camera space的坐标即最终的坐标（如果相机没有进行位置变换的化，如果有，需要再乘上变化矩阵）
+			x = pixel_camera_x;
+			y = pixel_camera_y;
+
+			Vector3f dir = Vector3f(x, y, -1); // Don't forget to normalize this direction!
+			framebuffer[m++] = castRay(eye_pos, dir, scene, 0);
         }
         UpdateProgress(j / (float)scene.height);
     }

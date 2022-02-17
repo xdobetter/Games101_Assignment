@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\BVH.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Sphere.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\global.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Triangle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Scene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Light.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\AreaLight.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\BVH.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Ray.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Material.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Intersection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Renderer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70D83304-FDC8-38C6-886E-A2C6E9953DB8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{20841AAC-2C9D-3113-BC8F-9EA34E7F59C3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
