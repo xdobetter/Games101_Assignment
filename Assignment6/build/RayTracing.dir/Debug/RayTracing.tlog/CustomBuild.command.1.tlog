@@ -1,0 +1,10 @@
+^D:\CADCG\SELFSTUDY_COURSE\GAMES101\ASSIGNMENT\GAMES101_ASSIGNMENT\ASSIGNMENT6\CMAKELISTS.TXT
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment6 -BD:/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment6/build --check-stamp-file D:/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment6/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

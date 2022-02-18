@@ -14,7 +14,7 @@ public:
     MaterialType m_type;
     Vector3f m_color;
     Vector3f m_emission;
-    float ior;
+    float ior;//’€…‰¬ 
     float Kd, Ks;
     float specularExponent;
     //Texture tex;
@@ -37,7 +37,6 @@ Material::Material(MaterialType t, Vector3f c, Vector3f e){
 MaterialType Material::getType(){return m_type;}
 Vector3f Material::getColor(){return m_color;}
 Vector3f Material::getEmission() {return m_emission;}
-
 Vector3f Material::getColorAt(double u, double v) {
     return Vector3f();
 }

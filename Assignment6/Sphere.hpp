@@ -28,7 +28,7 @@ public:
         if (t0 < 0) return false;
         return true;
     }
-    bool intersect(const Ray& ray, float &tnear, uint32_t &index) const
+    bool intersect(const Ray& ray, float &tnear, uint32_t &index) const//??
     {
         // analytic solution
         Vector3f L = ray.origin - center;

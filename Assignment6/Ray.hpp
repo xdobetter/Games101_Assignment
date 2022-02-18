@@ -8,7 +8,7 @@
 struct Ray{
     //Destination = origin + t*direction
     Vector3f origin;
-    Vector3f direction, direction_inv;
+    Vector3f direction, direction_inv;//inv什么时候用我不是很理解
     double t;//transportation time,
     double t_min, t_max;
 

@@ -11,11 +11,12 @@
 // function().
 int main(int argc, char** argv)
 {
-    Scene scene(1280, 960);
+    Scene scene(1280, 960);//图像宽高
 
-    MeshTriangle bunny("../models/bunny/bunny.obj");
+    std::string file_path = "../models/bunny.obj";
+    MeshTriangle obj(file_path);//三角网格
 
-    scene.Add(&bunny);//加入物体
+    scene.Add(&obj);//加入物体
     scene.Add(std::make_unique<Light>(Vector3f(-20, 70, 20), 1));//加入光源
     scene.Add(std::make_unique<Light>(Vector3f(20, 70, 20), 1));
     scene.buildBVH();//构建BVH

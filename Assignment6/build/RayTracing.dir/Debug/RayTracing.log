@@ -1,0 +1,15 @@
+﻿  BVH.cpp
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\global.hpp(19,46): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\global.hpp(21,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\global.hpp(45,13): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Ray.hpp(16,68): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Ray.hpp(16,52): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Ray.hpp(16,36): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Ray.hpp(22,65): warning C4244: “参数”: 从“double”转换到“const float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(20,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(20,33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(20,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(21,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(21,33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(21,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  RayTracing.vcxproj -> D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\build\Debug\RayTracing.exe

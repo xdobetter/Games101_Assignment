@@ -12,7 +12,7 @@ BVHAccel::BVHAccel(std::vector<Object*> p, int maxPrimsInNode,
     if (primitives.empty())
         return;
 
-    root = recursiveBuild(primitives);
+    root = recursiveBuild(primitives);//递归构建BVH
 
     time(&stop);
     double diff = difftime(stop, start);
@@ -31,9 +31,9 @@ BVHBuildNode* BVHAccel::recursiveBuild(std::vector<Object*> objects)
 
     // Compute bounds of all primitives in BVH node
     Bounds3 bounds;
-    for (int i = 0; i < objects.size(); ++i)
+    for (int i = 0; i < objects.size(); ++i)//计算全部图元的bounds
         bounds = Union(bounds, objects[i]->getBounds());
-    if (objects.size() == 1) {
+    if (objects.size() == 1) {//这里每个叶子结点放1个
         // Create leaf _BVHBuildNode_
         node->bounds = objects[0]->getBounds();
         node->object = objects[0];
@@ -49,25 +49,26 @@ BVHBuildNode* BVHAccel::recursiveBuild(std::vector<Object*> objects)
         return node;
     }
     else {
-        Bounds3 centroidBounds;
+        Bounds3 centroidBounds;//中心点Bounds
         for (int i = 0; i < objects.size(); ++i)
             centroidBounds =
                 Union(centroidBounds, objects[i]->getBounds().Centroid());
         int dim = centroidBounds.maxExtent();
+        //在最大的维度上进行排序
         switch (dim) {
-        case 0:
+        case 0://在x维度
             std::sort(objects.begin(), objects.end(), [](auto f1, auto f2) {
                 return f1->getBounds().Centroid().x <
                        f2->getBounds().Centroid().x;
             });
             break;
-        case 1:
+        case 1://在y维度
             std::sort(objects.begin(), objects.end(), [](auto f1, auto f2) {
                 return f1->getBounds().Centroid().y <
                        f2->getBounds().Centroid().y;
             });
             break;
-        case 2:
+        case 2://在z维度
             std::sort(objects.begin(), objects.end(), [](auto f1, auto f2) {
                 return f1->getBounds().Centroid().z <
                        f2->getBounds().Centroid().z;
@@ -104,6 +105,20 @@ Intersection BVHAccel::Intersect(const Ray& ray) const
 
 Intersection BVHAccel::getIntersection(BVHBuildNode* node, const Ray& ray) const
 {
-    // TODO Traverse the BVH to find intersection
 
+    // TODO Traverse the BVH to find intersection
+    
+    Intersection left_ins, right_ins;
+
+    //miss nodes.bbox
+    bool flag = node->bounds.IntersectP(ray);
+    if (!flag) {
+        return left_ins;
+    } 
+    //bbox与ray存在交点，且node is leaf，与node中的每个物体进行求交
+    if (!node->left && !node->right) return node->object->getIntersection(ray);
+   
+    left_ins=getIntersection(node->left, ray);//与左box求交
+    right_ins=getIntersection(root->right, ray);//与右box求交
+    return left_ins.distance < right_ins.distance ? left_ins: right_ins;//返回最近交点
 }

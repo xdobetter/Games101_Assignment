@@ -32,21 +32,21 @@ public:
     Bounds3 WorldBound() const;//
     ~BVHAccel();
 
-    Intersection Intersect(const Ray &ray) const;//?
-    Intersection getIntersection(BVHBuildNode* node, const Ray& ray)const;//?
-    bool IntersectP(const Ray &ray) const;//?
-    BVHBuildNode* root;
+    Intersection Intersect(const Ray &ray) const;//计算具体的交点
+    Intersection getIntersection(BVHBuildNode* node, const Ray& ray)const;//获取求交信息
+    bool IntersectP(const Ray &ray) const;//判断是否与ray求交
+    BVHBuildNode* root;//根节点
 
     // BVHAccel Private Methods
     BVHBuildNode* recursiveBuild(std::vector<Object*>objects);//?
 
     // BVHAccel Private Data
-    const int maxPrimsInNode;
-    const SplitMethod splitMethod;
-    std::vector<Object*> primitives;
+    const int maxPrimsInNode;//每个节点含有的图元数
+    const SplitMethod splitMethod;//划分方式
+    std::vector<Object*> primitives;//图元
 };
 
-struct BVHBuildNode {
+struct BVHBuildNode {//BVH的结点
     Bounds3 bounds;
     BVHBuildNode *left;
     BVHBuildNode *right;

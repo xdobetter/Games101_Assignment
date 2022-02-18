@@ -15,6 +15,7 @@ Intersection Scene::intersect(const Ray &ray) const
     return this->bvh->Intersect(ray);
 }
 
+
 bool Scene::trace(
         const Ray &ray,
         const std::vector<Object*> &objects,
@@ -31,8 +32,6 @@ bool Scene::trace(
             index = indexK;
         }
     }
-
-
     return (*hitObject != nullptr);
 }
 
@@ -48,7 +47,7 @@ bool Scene::trace(
 // the amount of reflection and refractin depending on the surface normal, incident view direction
 // and surface refractive index).
 //
-// If the surface is duffuse/glossy we use the Phong illumation model to compute the color
+// If the surface is diffuse/glossy we use the Phong illumation model to compute the color
 // at the intersection point.
 Vector3f Scene::castRay(const Ray &ray, int depth) const
 {
@@ -59,11 +58,10 @@ Vector3f Scene::castRay(const Ray &ray, int depth) const
     Material *m = intersection.m;
     Object *hitObject = intersection.obj;
     Vector3f hitColor = this->backgroundColor;
-//    float tnear = kInfinity;
+//  float tnear = kInfinity;
     Vector2f uv;
     uint32_t index = 0;
     if(intersection.happened) {
-
         Vector3f hitPoint = intersection.coords;
         Vector3f N = intersection.normal; // normal
         Vector2f st; // st coordinates
@@ -110,7 +108,7 @@ Vector3f Scene::castRay(const Ray &ray, int depth) const
                                            hitPoint - N * EPSILON;
                 // [comment]
                 // Loop over all lights in the scene and sum their contribution up
-                // We also apply the lambert cosine law
+                // We also apply the lambert cosine law 
                 // [/comment]
                 for (uint32_t i = 0; i < get_lights().size(); ++i)
                 {
@@ -121,26 +119,25 @@ Vector3f Scene::castRay(const Ray &ray, int depth) const
                     }
                     else
                     {
-                        Vector3f lightDir = get_lights()[i]->position - hitPoint;
+                        //注意方向是谁-谁的
+                        Vector3f lightDir = get_lights()[i]->position - hitPoint;//这个写法第一次见到
                         // square of the distance between hitPoint and the light
-                        float lightDistance2 = dotProduct(lightDir, lightDir);
+                        float lightDistance2 = dotProduct(lightDir, lightDir);//
                         lightDir = normalize(lightDir);
                         float LdotN = std::max(0.f, dotProduct(lightDir, N));
                         Object *shadowHitObject = nullptr;
                         float tNearShadow = kInfinity;
                         // is the point in shadow, and is the nearest occluding object closer to the object than the light itself?
                         bool inShadow = bvh->Intersect(Ray(shadowPointOrig, lightDir)).happened;
-                        lightAmt += (1 - inShadow) * get_lights()[i]->intensity * LdotN;
+                        lightAmt += (1 - inShadow) * get_lights()[i]->intensity * LdotN;//这里通过1-inShadow，就对shadow也同时进行了判断
                         Vector3f reflectionDirection = reflect(-lightDir, N);
-                        specularColor += powf(std::max(0.f, -dotProduct(reflectionDirection, ray.direction)),
-                                              m->specularExponent) * get_lights()[i]->intensity;
+                        specularColor += powf(std::max(0.f, -dotProduct(reflectionDirection, ray.direction)),m->specularExponent) * get_lights()[i]->intensity;
                     }
                 }
-                hitColor = lightAmt * (hitObject->evalDiffuseColor(st) * m->Kd + specularColor * m->Ks);
+                hitColor = lightAmt * (hitObject->evalDiffuseColor(st) * m->Kd + specularColor * m->Ks);//lightAmt控制了阴影效果
                 break;
             }
         }
     }
-
     return hitColor;
 }

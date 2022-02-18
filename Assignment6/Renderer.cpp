@@ -44,12 +44,14 @@ void Renderer::Render(const Scene& scene)
 			float pixel_camera_x = pixel_screen_x * imageAspectRatio * scale;
 			float pixel_camera_y = pixel_screen_y * scale;
 
-			//camera space的坐标即最终的坐标（如果相机没有进行位置变换的化，如果有，需要再乘上变化矩阵）
+			//camera space的坐标即最终的坐标（如果相机有进行平移变换的话，需要再乘上变化矩阵）
 			x = pixel_camera_x;
 			y = pixel_camera_y;
 
 			Vector3f dir = Vector3f(x, y, -1); // Don't forget to normalize this direction!
-			framebuffer[m++] = castRay(eye_pos, dir, scene, 0);
+			
+            Ray ray(eye_pos,dir);//生成光线
+            framebuffer[m++] = scene.castRay(ray, 0);//朝该位置射出光线,0递归深度
         }
         UpdateProgress(j / (float)scene.height);
     }

@@ -29,13 +29,14 @@ public:
     void Add(Object *object) { objects.push_back(object); }//压入物体
     void Add(std::unique_ptr<Light> light) { lights.push_back(std::move(light)); }//压入光源
 
-    const std::vector<Object*>& get_objects() const { return objects; }
-    const std::vector<std::unique_ptr<Light> >&  get_lights() const { return lights; }
+    const std::vector<Object*>& get_objects() const { return objects; }//获取物体
+    const std::vector<std::unique_ptr<Light> >&  get_lights() const { return lights; }//获取光源
     Intersection intersect(const Ray& ray) const;
     BVHAccel *bvh;//bvh
     void buildBVH();//构建bvh
     Vector3f castRay(const Ray &ray, int depth) const;//投射光线
-    bool trace(const Ray &ray, const std::vector<Object*> &objects, float &tNear, uint32_t &index, Object **hitObject);
+    bool trace(const Ray &ray, const std::vector<Object*> &objects, float &tNear, uint32_t &index, Object **hitObject);//?
+
     std::tuple<Vector3f, Vector3f> HandleAreaLight(const AreaLight &light, const Vector3f &hitPoint, const Vector3f &N,
                                                    const Vector3f &shadowPointOrig,
                                                    const std::vector<Object *> &objects, uint32_t &index,

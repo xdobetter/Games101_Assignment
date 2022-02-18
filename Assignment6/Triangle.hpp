@@ -80,8 +80,12 @@ public:
     MeshTriangle(const std::string& filename)
     {
         objl::Loader loader;
-        loader.LoadFile(filename);//加载图元
-
+        if (!loader.LoadFile(filename))
+        {
+            std::cout << "load file defeated" << std::endl;
+            return;
+        }//加载图元
+        
         assert(loader.LoadedMeshes.size() == 1);
         auto mesh = loader.LoadedMeshes[0];
 
@@ -97,7 +101,7 @@ public:
                 auto vert = Vector3f(mesh.Vertices[i + j].Position.X,
                                      mesh.Vertices[i + j].Position.Y,
                                      mesh.Vertices[i + j].Position.Z) *
-                            60.f;
+                            60.f;//这里为社么*60
                 face_vertices[j] = vert;
 
                 min_vert = Vector3f(std::min(min_vert.x, vert.x),
@@ -234,11 +238,15 @@ inline Intersection Triangle::getIntersection(Ray ray)
     t_tmp = dotProduct(e2, qvec) * det_inv;
 
     // TODO find ray triangle intersection
-    //这里的含义是当知道光线与三角形有交点后，如何计算出该交点的值！
-    if(t_tmp<inter)
-    inter.coords = (1 - u - v) * v0 + v1 + v2;
-
-
+    //这里的含义是当知道光线与三角形有交点后，如何计算出该交点的相关信息
+ 
+    inter.happened = true;
+    inter.coords = Vector3f(ray.origin + ray.direction * t_tmp);
+    inter.normal = normal;
+    inter.m = this->m;
+    inter.obj = this;
+    inter.distance = t_tmp;
+    
     return inter;
 }
 
