@@ -141,14 +141,14 @@ Vector3f castRay(
             {
                 Vector3f reflectionDirection = normalize(reflect(dir, N));
                 Vector3f refractionDirection = normalize(refract(dir, N, payload->hit_obj->ior));
-//                Vector3f reflectionRayOrig = (dotProduct(reflectionDirection, N) < 0) ? //内侧，需要向外偏移
-//                                             hitPoint - N * scene.epsilon ://外侧，需要向内偏移
-//                                             hitPoint + N * scene.epsilon;
-//                Vector3f refractionRayOrig = (dotProduct(refractionDirection, N) < 0) ?
-//                                             hitPoint - N * scene.epsilon :
-//                                             hitPoint + N * scene.epsilon;
-                Vector3f reflectionRayOrig = hitPoint + N * scene.epsilon;
-                Vector3f refractionRayOrig = hitPoint + N * scene.epsilon;
+                Vector3f reflectionRayOrig = (dotProduct(reflectionDirection, N) < 0) ? //内侧，需要向外偏移
+                                             hitPoint - N * scene.epsilon ://外侧，需要向内偏移
+                                             hitPoint + N * scene.epsilon;
+                Vector3f refractionRayOrig = (dotProduct(refractionDirection, N) < 0) ?
+                                             hitPoint - N * scene.epsilon :
+                                             hitPoint + N * scene.epsilon;
+   /*             Vector3f reflectionRayOrig = hitPoint + N * scene.epsilon;
+				Vector3f refractionRayOrig = hitPoint + N * scene.epsilon;*/
                 Vector3f reflectionColor = castRay(reflectionRayOrig, reflectionDirection, scene, depth + 1);
                 Vector3f refractionColor = castRay(refractionRayOrig, refractionDirection, scene, depth + 1);
                 float kr = fresnel(dir, N, payload->hit_obj->ior);
@@ -247,8 +247,9 @@ void Renderer::Render(const Scene& scene)
             //camera space的坐标即最终的坐标（如果相机没有进行位置变换的化，如果有，需要再乘上变化矩阵）
             x=pixel_camera_x;
             y=pixel_camera_y;
-
+            
             Vector3f dir = Vector3f(x, y, -1); // Don't forget to normalize this direction!
+            dir=normalize(dir);
             framebuffer[m++] = castRay(eye_pos, dir, scene, 0);
         }
         UpdateProgress(j / (float)scene.height);

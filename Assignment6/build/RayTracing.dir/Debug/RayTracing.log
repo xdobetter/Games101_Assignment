@@ -1,4 +1,5 @@
-﻿  BVH.cpp
+﻿  main.cpp
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Scene.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\global.hpp(19,46): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\global.hpp(21,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\global.hpp(45,13): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
@@ -12,4 +13,18 @@ D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bo
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(21,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(21,33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(21,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(101,20): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Bounds3.hpp(102,20): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Scene.hpp(23,30): warning C4305: “参数”: 从“double”到“float”截断
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\OBJ_Loader.hpp(945,33): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Triangle.hpp(122,1): warning C4305: “=”: 从“double”到“float”截断
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Triangle.hpp(182,23): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Triangle.hpp(185,1): warning C4305: “参数”: 从“double”到“float”截断
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\Triangle.hpp(248,58): warning C4244: “参数”: 从“double”转换到“const float”，可能丢失数据
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3416,56): warning C4244: “参数”: 从“_Ty”转换到“float”，可能丢失数据
+          with
+          [
+              _Ty=int
+          ]
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\main.cpp(20): message : 查看对正在编译的函数 模板 实例化“std::unique_ptr<Light,std::default_delete<Light>> std::make_unique<Light,Vector3f,int,0>(Vector3f &&,int &&)”的引用
   RayTracing.vcxproj -> D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment6\build\Debug\RayTracing.exe

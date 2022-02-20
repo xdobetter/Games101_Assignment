@@ -34,6 +34,7 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1,
     float invDet = 1 / det;
 
     tnear = dotProduct(edge2, qvec) * invDet;
+    if (tnear < 0) return false;
     u *= invDet;
     v *= invDet;
 
@@ -98,10 +99,13 @@ public:
         for (int i = 0; i < mesh.Vertices.size(); i += 3) {
             std::array<Vector3f, 3> face_vertices;
             for (int j = 0; j < 3; j++) {
-                auto vert = Vector3f(mesh.Vertices[i + j].Position.X,
-                                     mesh.Vertices[i + j].Position.Y,
-                                     mesh.Vertices[i + j].Position.Z) *
-                            60.f;//这里为社么*60
+                //auto vert = Vector3f(mesh.Vertices[i + j].Position.X,
+                //                     mesh.Vertices[i + j].Position.Y,
+                //                     mesh.Vertices[i + j].Position.Z) *
+                //            60.f;//这里为社么*60
+				auto vert = Vector3f(mesh.Vertices[i + j].Position.X,
+					mesh.Vertices[i + j].Position.Y,
+					mesh.Vertices[i + j].Position.Z);//去掉*60
                 face_vertices[j] = vert;
 
                 min_vert = Vector3f(std::min(min_vert.x, vert.x),
@@ -239,7 +243,7 @@ inline Intersection Triangle::getIntersection(Ray ray)
 
     // TODO find ray triangle intersection
     //这里的含义是当知道光线与三角形有交点后，如何计算出该交点的相关信息
- 
+    if (t_tmp < 0) return inter;//t_tmp要确保不小于0
     inter.happened = true;
     inter.coords = Vector3f(ray.origin + ray.direction * t_tmp);
     inter.normal = normal;

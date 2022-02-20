@@ -84,41 +84,27 @@ class Bounds3 //Bounding Box
         return (i == 0) ? pMin : pMax;
     }
 
-    inline bool IntersectP(const Ray& ray) const;
+    inline bool IntersectP(const Ray& ray, const Vector3f& invDir, const std::array<int, 3>& dirisNeg) const;
 };
 
 
 
-inline bool Bounds3::IntersectP(const Ray& ray) const//与包围盒求交
+inline bool Bounds3::IntersectP(const Ray& ray,const Vector3f&invDir, const std::array<int, 3>& dirisNeg) const//与包围盒求交
 {
     // invDir: ray direction(x,y,z), invDir=(1.0/x,1.0/y,1.0/z), use this because Multiply is faster that Division
     // dirIsNeg: ray direction(x,y,z), dirIsNeg=[int(x>0),int(y>0),int(z>0)], use this to simplify your logic
     // TODO test if ray bound intersects
     //待完成部分：ray和包围盒求交
-    float x_tmin, x_tmax, y_tmin, y_tmax, z_tmin, z_tmax;
-    Vector3f px_min(pMin.x, 0, 0);
-    Vector3f dx(ray.direction.x, 0, 0);
-    x_tmin = dotProduct((px_min - ray.origin),dx)/dotProduct(dx,dx);
-    Vector3f px_max(pMax.x, 0, 0);
-    x_tmax = dotProduct((px_max - ray.origin),dx)/dotProduct(dx,dx);
-
-    Vector3f py_min(pMin.y, 0, 0);
-    Vector3f dy(ray.direction.y, 0, 0);
-    y_tmin = dotProduct((py_min - ray.origin), dy) / dotProduct(dy, dy);
-    Vector3f py_max(pMax.y, 0, 0);
-    y_tmax = dotProduct((py_max - ray.origin), dy) / dotProduct(dy, dy);
-
-    Vector3f pz_min(pMin.z, 0, 0);
-    Vector3f dz(ray.direction.z, 0, 0);
-    z_tmin = dotProduct((pz_min - ray.origin), dz) / dotProduct(dz, dz);
-    Vector3f pz_max(pMax.z, 0, 0);
-    z_tmax = dotProduct((pz_max - ray.origin), dz) / dotProduct(dz, dz);
-
-    float tnear, tfar;
-    tnear = std::max(x_tmin, std::max(y_tmin, z_tmin));
-    tfar = std::min(x_tmax, std::min(y_tmax, z_tmax));
-
-    if (tnear < tfar && tfar >= 0) return true;
+    float tenter = -std::numeric_limits<float>::infinity();
+    float tout = std::numeric_limits<float>::infinity();
+    for (int i = 0; i < 3; i++) {
+        float tmin = (pMin[i] - ray.origin[i]) * invDir[i];
+        float tmax = (pMax[i] - ray.origin[i]) * invDir[i];
+        if (dirisNeg[i] == 0) std::swap(tmin, tmax);//如果dir方向为负，则tenter和tout需要反一下
+        tenter = std::max(tmin, tenter);
+        tout = std::min(tmax, tout);
+    }
+    if (tenter < tout && tout>=0) return true;
     return false;
 }
 

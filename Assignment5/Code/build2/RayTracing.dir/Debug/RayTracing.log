@@ -1,2 +1,395 @@
-﻿  Building Custom Rule D:/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment5/Code/CMakeLists.txt
-cl : 命令行 error D8021: 无效的数值参数“/Wextra”
+﻿  main.cpp
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\main.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(92,5): error C2143: 语法错误: 缺少“;”(在“return”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(92,5): error C2059: 语法错误:“return”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(93,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(93,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(97,5): error C2059: 语法错误:“if”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(98,5): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(98,5): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(103,5): error C2059: 语法错误:“return”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(104,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(104,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(107,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(107,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(22,28): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(25,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(35,23): warning C4471: “MaterialType”: 未区分范围的枚举的前向声明必须有基础类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(38,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(38,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(50,5): error C2144: 语法错误:“int”的前面应有“;”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(52,15): error C2143: 语法错误: 缺少“;”(在“<<”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(52,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(52,10): error C2371: “std::cout”: 重定义；不同的基类型
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\iostream(41): message : 参见“std::cout”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(53,26): error C2065: “progress”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,5): error C2059: 语法错误:“for”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,5): error C2143: 语法错误: 缺少“)”(在“;”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,23): error C2143: 语法错误: 缺少“;”(在“<”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,23): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,35): error C2059: 语法错误:“++”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,38): error C2059: 语法错误:“)”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(55,5): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(55,5): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(63,15): error C2143: 语法错误: 缺少“;”(在“<<”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(63,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(63,10): error C2371: “std::cout”: 重定义；不同的基类型
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\iostream(41): message : 参见“std::cout”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,14): error C3927: "->": 非函数声明符后不允许尾随返回类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,14): error C3484: 语法错误: 返回类型前应为“->”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,15): error C3613: “->”后缺少返回类型(假定为“int”)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,20): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,10): error C2371: “std::cout”: 重定义；不同的基类型
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\iostream(41): message : 参见“std::cout”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,15): error C2146: 语法错误: 缺少“;”(在标识符“flush”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(65,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(65,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp(7,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp(7,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Light.hpp(8,10): warning C4459: “i”的声明隐藏了全局声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,21): message : 参见“i”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,30): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,19): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,19): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,38): error C2955: “std::unique_ptr”: 使用 类 模板 需要 模板 参数列表
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,53): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,42): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,42): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,42): error C3203: “unique_ptr”: 未专用化的 类 模板 不能用作 模板 变量，该变量属于 模板 参数“_Ty”，应为 real 类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,33): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,22): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,22): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,22): error C3203: “unique_ptr”: 未专用化的 类 模板 不能用作 模板 变量，该变量属于 模板 参数“_Ty”，应为 real 类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,71): error C2672: “std::move”: 未找到匹配的重载函数
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,46): error C2893: 未能使函数模板“remove_reference<_Ty>::type &&std::move(_Ty &&) noexcept”专用化
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1455): message : 参见“std::move”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,46): message : 用下列模板参数:
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,46): message : “_Ty=std::unique_ptr &”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(7,1): error C2504: “Object”: 未定义基类
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(36,9): error C3646: “N”: 未知重写说明符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(36,22): error C2061: 语法错误: 标识符“normalize”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(36,22): error C2610: “void Sphere::getSurfaceProperties(const Vector3f &,const Vector3f &,const uint32_t &,const Vector2f &,Vector3f &,Vector2f &) const”: 不是可默认为的特殊成员函数或比较运算符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(36,22): error C2059: 语法错误:“(”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(15,10): error C3668: “Sphere::intersect”: 包含重写说明符“override”的方法没有重写任何基类方法
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(34,10): error C3668: “Sphere::getSurfaceProperties”: 包含重写说明符“override”的方法没有重写任何基类方法
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(37,5): warning C5204: "Sphere": 类包含虚函数，但其常用的析构函数不是虚函数；从该类派生的实例可能无法进行正确析构
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(39,5): error C2512: “Sphere”: 没有合适的默认构造函数可用
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(6,7): message : 参见“Sphere”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(39,14): error C2146: 语法错误: 缺少“;”(在标识符“center”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(39,20): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(10,11): error C2614: “Sphere”: 非法的成员初始化:“center”不是基或成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(11,11): error C2614: “Sphere”: 非法的成员初始化:“radius”不是基或成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(12,11): error C2614: “Sphere”: 非法的成员初始化:“radius2”不是基或成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(18,18): error C2146: 语法错误: 缺少“;”(在标识符“L”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(18,9): warning C4555: 未使用表达式结果
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(18,18): error C2065: “L”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(18,29): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(19,19): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(20,39): error C2065: “L”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(20,23): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(21,30): error C2065: “L”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(21,33): error C2065: “L”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(21,19): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(21,38): error C2065: “radius2”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(41,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(41,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(7,41): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(7,41): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(7,33): warning C4459: “Vector3f”的声明隐藏了全局声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Sphere.hpp(39,5): message : 参见“Vector3f”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(14,14): error C2146: 语法错误: 缺少“;”(在标识符“E1”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(14,5): warning C4555: 未使用表达式结果
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(14,14): error C2065: “E1”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(14,17): error C2065: “v1”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(14,20): error C2065: “v0”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(15,14): error C2146: 语法错误: 缺少“;”(在标识符“E2”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(15,5): warning C4555: 未使用表达式结果
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(15,14): error C2065: “E2”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(15,17): error C2065: “v2”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(15,20): error C2065: “v0”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(16,14): error C2146: 语法错误: 缺少“;”(在标识符“S”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(16,5): warning C4555: 未使用表达式结果
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(16,14): error C2065: “S”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(16,16): error C2065: “orig”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(16,21): error C2065: “v0”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(17,14): error C2146: 语法错误: 缺少“;”(在标识符“S1”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(17,5): warning C4555: 未使用表达式结果
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(17,14): error C2065: “S1”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(17,31): error C2065: “dir”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(17,35): error C2065: “E2”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(18,14): error C2146: 语法错误: 缺少“;”(在标识符“S2”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(18,5): warning C4555: 未使用表达式结果
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(18,14): error C2065: “S2”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(18,31): error C2065: “S”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(18,33): error C2065: “E1”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(19,27): error C2065: “S1”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(19,30): error C2065: “E1”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(19,16): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(21,5): error C2065: “u”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(21,19): error C2065: “S1”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(21,22): error C2065: “S”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(21,8): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Triangle.hpp(21,23): fatal error C1003: 错误计数超过 100；正在停止编译
+  Scene.cpp
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(92,5): error C2143: 语法错误: 缺少“;”(在“return”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(92,5): error C2059: 语法错误:“return”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(93,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(93,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(97,5): error C2059: 语法错误:“if”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(98,5): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(98,5): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(103,5): error C2059: 语法错误:“return”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(104,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(104,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(107,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(107,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(22,28): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(25,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(35,23): warning C4471: “MaterialType”: 未区分范围的枚举的前向声明必须有基础类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(38,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(38,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(50,5): error C2144: 语法错误:“int”的前面应有“;”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(52,15): error C2143: 语法错误: 缺少“;”(在“<<”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(52,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(52,10): error C2371: “std::cout”: 重定义；不同的基类型
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\iostream(41): message : 参见“std::cout”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(53,26): error C2065: “progress”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,5): error C2059: 语法错误:“for”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,5): error C2143: 语法错误: 缺少“)”(在“;”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,23): error C2143: 语法错误: 缺少“;”(在“<”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,23): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,35): error C2059: 语法错误:“++”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,38): error C2059: 语法错误:“)”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(55,5): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(55,5): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(63,15): error C2143: 语法错误: 缺少“;”(在“<<”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(63,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(63,10): error C2371: “std::cout”: 重定义；不同的基类型
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\iostream(41): message : 参见“std::cout”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,14): error C3927: "->": 非函数声明符后不允许尾随返回类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,14): error C3484: 语法错误: 返回类型前应为“->”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,15): error C3613: “->”后缺少返回类型(假定为“int”)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,20): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,10): error C2371: “std::cout”: 重定义；不同的基类型
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\iostream(41): message : 参见“std::cout”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,15): error C2146: 语法错误: 缺少“;”(在标识符“flush”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(65,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(65,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp(7,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp(7,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Light.hpp(8,10): warning C4459: “i”的声明隐藏了全局声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,21): message : 参见“i”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,30): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,19): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,19): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,38): error C2955: “std::unique_ptr”: 使用 类 模板 需要 模板 参数列表
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,53): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,42): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,42): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,42): error C3203: “unique_ptr”: 未专用化的 类 模板 不能用作 模板 变量，该变量属于 模板 参数“_Ty”，应为 real 类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,33): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,22): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,22): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,22): error C3203: “unique_ptr”: 未专用化的 类 模板 不能用作 模板 变量，该变量属于 模板 参数“_Ty”，应为 real 类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,71): error C2672: “std::move”: 未找到匹配的重载函数
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,46): error C2893: 未能使函数模板“remove_reference<_Ty>::type &&std::move(_Ty &&) noexcept”专用化
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1455): message : 参见“std::move”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,46): message : 用下列模板参数:
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,46): message : “_Ty=std::unique_ptr &”
+  Renderer.cpp
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\limits.h(70,5): warning C4668: 没有将“__STDC_WANT_SECURE_LIB__”定义为预处理器宏，用“0”替换“#if/#elif”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(92,5): error C2143: 语法错误: 缺少“;”(在“return”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(92,5): error C2059: 语法错误:“return”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(93,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(93,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(97,5): error C2059: 语法错误:“if”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(98,5): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(98,5): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(103,5): error C2059: 语法错误:“return”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(104,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(104,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(107,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Vector.hpp(107,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(22,28): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(25,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(35,23): warning C4471: “MaterialType”: 未区分范围的枚举的前向声明必须有基础类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(38,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(38,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(50,5): error C2144: 语法错误:“int”的前面应有“;”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(52,15): error C2143: 语法错误: 缺少“;”(在“<<”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(52,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(52,10): error C2371: “std::cout”: 重定义；不同的基类型
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\iostream(41): message : 参见“std::cout”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(53,26): error C2065: “progress”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,5): error C2059: 语法错误:“for”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,5): error C2143: 语法错误: 缺少“)”(在“;”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,23): error C2143: 语法错误: 缺少“;”(在“<”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,23): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,35): error C2059: 语法错误:“++”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,38): error C2059: 语法错误:“)”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(55,5): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(55,5): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(63,15): error C2143: 语法错误: 缺少“;”(在“<<”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(63,15): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(63,10): error C2371: “std::cout”: 重定义；不同的基类型
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\iostream(41): message : 参见“std::cout”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,14): error C3927: "->": 非函数声明符后不允许尾随返回类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,14): error C3484: 语法错误: 返回类型前应为“->”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,15): error C3613: “->”后缺少返回类型(假定为“int”)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,20): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,10): error C2371: “std::cout”: 重定义；不同的基类型
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\iostream(41): message : 参见“std::cout”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(64,15): error C2146: 语法错误: 缺少“;”(在标识符“flush”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(65,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(65,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp(7,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Object.hpp(7,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Light.hpp(8,10): warning C4459: “i”的声明隐藏了全局声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,21): message : 参见“i”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,30): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,19): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,19): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,38): error C2955: “std::unique_ptr”: 使用 类 模板 需要 模板 参数列表
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,53): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,42): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,42): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(23,42): error C3203: “unique_ptr”: 未专用化的 类 模板 不能用作 模板 变量，该变量属于 模板 参数“_Ty”，应为 real 类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,33): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,22): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,22): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(27,22): error C3203: “unique_ptr”: 未专用化的 类 模板 不能用作 模板 变量，该变量属于 模板 参数“_Ty”，应为 real 类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,71): error C2672: “std::move”: 未找到匹配的重载函数
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,46): error C2893: 未能使函数模板“remove_reference<_Ty>::type &&std::move(_Ty &&) noexcept”专用化
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1455): message : 参见“std::move”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,46): message : 用下列模板参数:
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(20,46): message : “_Ty=std::unique_ptr &”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(9,11): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(9,11): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(9,20): error C2238: 意外的标记位于“;”之前
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(8,20): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(13,20): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(30,31): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(48,31): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(80,43): error C2065: “Object”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(80,32): error C2923: “std::unique_ptr”: 对于参数“_Ty”，“Object”不是有效的 模板 类型变量
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(80): message : 参见“Object”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(80,32): error C2976: “std::unique_ptr”: 模板 参数太少
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(3155): message : 参见“std::unique_ptr”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(80,32): error C3203: “unique_ptr”: 未专用化的 类 模板 不能用作 模板 变量，该变量属于 模板 参数“_Ty”，应为 real 类型
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(92,22): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(123,23): error C2039: "maxDepth": 不是 "Scene" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(9): message : 参见“Scene”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(127,31): error C2039: "backgroundColor": 不是 "Scene" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(9): message : 参见“Scene”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(133,18): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(134,26): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(137,48): error C3861: “normalize”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(138,83): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(138,95): error C2660: “refract”: 函数不接受 2 个参数
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(28,10): message : 参见“refract”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(138,48): error C3861: “normalize”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(139,47): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(140,26): error C2146: 语法错误: 缺少“,”(在标识符“refractionRayOrig”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(146,52): error C2065: “refractionRayOrig”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(147,53): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(147,65): error C2660: “fresnel”: 函数不接受 2 个参数
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(46,7): message : 参见“fresnel”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(153,53): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(153,65): error C2660: “fresnel”: 函数不接受 2 个参数
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(46,7): message : 参见“fresnel”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(155,47): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(156,67): error C2039: "epsilon": 不是 "Scene" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(9): message : 参见“Scene”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(157,67): error C2039: "epsilon": 不是 "Scene" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(9): message : 参见“Scene”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(168,45): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(169,65): error C2039: "epsilon": 不是 "Scene" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(9): message : 参见“Scene”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(170,65): error C2039: "epsilon": 不是 "Scene" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(9): message : 参见“Scene”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(175,42): error C2039: "get_lights": 不是 "Scene" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Scene.hpp(9): message : 参见“Scene”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(175,17): error C2530: “light”: 必须初始化引用
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(175,17): error C3531: “light”: 类型包含“auto”的符号必须具有初始值设定项
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(175,34): error C2143: 语法错误: 缺少“;”(在“:”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(175,54): error C2143: 语法错误: 缺少“;”(在“)”的前面)
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(178,44): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(179,32): error C3861: “normalize”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(180,49): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(188,58): error C3861: “dotProduct”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(189,34): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(188,38): error C2660: “powf”: 函数不接受 1 个参数
+D:\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h(714,48): message : 参见“powf”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(192,48): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(192,89): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(192,128): error C2039: "hit_obj": 不是 "hit_payload" 的成员
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.hpp(4): message : 参见“hit_payload”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(208,65): warning C4365: “参数”: 从“int”转换到“const unsigned __int64”，有符号/无符号不匹配
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(210,46): warning C4244: “参数”: 从“double”转换到“const float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(211,35): warning C5219: 从“const int”隐式转换到“float”，可能会丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(217,9): warning C4459: “i”的声明隐藏了全局声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\global.hpp(54,21): message : 参见“i”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(228,30): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(229,30): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(243,17): error C3861: “normalize”: 找不到标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(244,28): warning C4365: “参数”: 从“int”转换到“const unsigned __int64”，有符号/无符号不匹配
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(246,24): warning C5219: 从“int”隐式转换到“float”，可能会丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(253,58): warning C4365: “参数”: 从“int”转换到“const unsigned __int64”，有符号/无符号不匹配
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(253,63): warning C4365: “=”: 从“char”转换到“unsigned char”，有符号/无符号不匹配
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(254,58): warning C4365: “参数”: 从“int”转换到“const unsigned __int64”，有符号/无符号不匹配
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(254,63): warning C4365: “=”: 从“char”转换到“unsigned char”，有符号/无符号不匹配
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(255,58): warning C4365: “参数”: 从“int”转换到“const unsigned __int64”，有符号/无符号不匹配
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(255,63): warning C4365: “=”: 从“char”转换到“unsigned char”，有符号/无符号不匹配
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(250,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(258,12): error C2065: “fp”: 未声明的标识符
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(258,14): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(258,5): error C2365: “fclose”: 重定义；以前的定义是“函数”
+D:\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h(152): message : 参见“fclose”的声明
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(259,1): error C2059: 语法错误:“}”
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment5\Code\Renderer.cpp(259,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+  正在生成代码...

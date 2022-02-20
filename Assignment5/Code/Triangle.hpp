@@ -25,7 +25,7 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f
     if(v<0||u+v>1) return false;
 
     tnear= dotProduct(S2,E2)/det;
-
+    if (tnear < 0) return false;//确保tnear也要不小于0
 
     return true;
 }

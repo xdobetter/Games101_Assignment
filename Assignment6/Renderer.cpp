@@ -20,7 +20,10 @@ void Renderer::Render(const Scene& scene)
 
     float scale = tan(deg2rad(scene.fov * 0.5));
     float imageAspectRatio = scene.width / (float)scene.height;
-    Vector3f eye_pos(-1, 5, 10);
+    Vector3f eye_pos(-80, 150, 10);
+    //Vector3f eye_pos(0, 0, 10);
+    //Vector3f eye_pos(0, 0, 0);
+    //Vector3f eye_pos(-1, 20, 20);
     int m = 0;
     for (uint32_t j = 0; j < scene.height; ++j) {
         for (uint32_t i = 0; i < scene.width; ++i) {
@@ -47,10 +50,11 @@ void Renderer::Render(const Scene& scene)
 			//camera space的坐标即最终的坐标（如果相机有进行平移变换的话，需要再乘上变化矩阵）
 			x = pixel_camera_x;
 			y = pixel_camera_y;
-
-			Vector3f dir = Vector3f(x, y, -1); // Don't forget to normalize this direction!
-			
-            Ray ray(eye_pos,dir);//生成光线
+            Vector3f origin = eye_pos;
+			//Vector3f dir = Vector3f(x, y, -1)-origin; // Don't forget to normalize this direction!，这里理论上方向应该是这么算的，但发现这么加上是错的
+            Vector3f dir = Vector3f(x, y, -1);
+            dir = normalize(dir);
+            Ray ray(origin,dir);//生成光线
             framebuffer[m++] = scene.castRay(ray, 0);//朝该位置射出光线,0递归深度
         }
         UpdateProgress(j / (float)scene.height);

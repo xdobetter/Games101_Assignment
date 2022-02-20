@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 {
     Scene scene(1280, 960);//图像宽高
 
-    std::string file_path = "../models/bunny.obj";
+    std::string file_path = "../models/dragon.obj";
     MeshTriangle obj(file_path);//三角网格
 
     scene.Add(&obj);//加入物体

@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <cassert>
+#include <chrono>
 #include "BVH.hpp"
 
 BVHAccel::BVHAccel(std::vector<Object*> p, int maxPrimsInNode,
@@ -7,22 +8,29 @@ BVHAccel::BVHAccel(std::vector<Object*> p, int maxPrimsInNode,
     : maxPrimsInNode(std::min(255, maxPrimsInNode)), splitMethod(splitMethod),
       primitives(std::move(p))
 {
-    time_t start, stop;
-    time(&start);
+    //time_t start, stop;//这个时间计算不精确，换为chrono
+    //time(&start);
+    auto start_time = std::chrono::steady_clock::now();
     if (primitives.empty())
         return;
 
     root = recursiveBuild(primitives);//递归构建BVH
 
-    time(&stop);
-    double diff = difftime(stop, start);
-    int hrs = (int)diff / 3600;
-    int mins = ((int)diff / 60) - (hrs * 60);
-    int secs = (int)diff - (hrs * 3600) - (mins * 60);
+    auto end_time = std::chrono::steady_clock::now();
+    auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
+    //time(&stop);
+    //double diff = difftime(stop, start);
+    //int hrs = (int)diff / 3600;
+    //int mins = ((int)diff / 60) - (hrs * 60);
+    //int secs = (int)diff - (hrs * 3600) - (mins * 60);
 
-    printf(
+    /*printf(
         "\rBVH Generation complete: \nTime Taken: %i hrs, %i mins, %i secs\n\n",
-        hrs, mins, secs);
+        hrs, mins, secs);*/
+    //int secs = microseconds / (1000 * 1000);
+    //double msec = microseconds/1000 - secs*1000;
+    //printf("\rBVH Generation complete: \nTime taken: %i secs, %.3f ms \n",secs,msec);
+    printf("\rBVH Generation complete: \nTime taken: %.3f ms \n", microseconds/1000.0f);
 }
 
 BVHBuildNode* BVHAccel::recursiveBuild(std::vector<Object*> objects)
@@ -108,17 +116,20 @@ Intersection BVHAccel::getIntersection(BVHBuildNode* node, const Ray& ray) const
 
     // TODO Traverse the BVH to find intersection
     
-    Intersection left_ins, right_ins;
+    Intersection left_ins,right_ins;
+    std::array<int,3> dirIsNeg;
+    dirIsNeg[0] = int(ray.direction.x >= 0);
+	dirIsNeg[1] = int(ray.direction.y >= 0);
+	dirIsNeg[2] = int(ray.direction.z >= 0);
 
     //miss nodes.bbox
-    bool flag = node->bounds.IntersectP(ray);
+    bool flag = node->bounds.IntersectP(ray,ray.direction_inv,dirIsNeg);
     if (!flag) {
         return left_ins;
     } 
-    //bbox与ray存在交点，且node is leaf，与node中的每个物体进行求交
+    //bbox与ray存在交点，且node is leaf（此处默认每个leaf都是只有一个结点），与node中的每个物体进行求交
     if (!node->left && !node->right) return node->object->getIntersection(ray);
-   
     left_ins=getIntersection(node->left, ray);//与左box求交
-    right_ins=getIntersection(root->right, ray);//与右box求交
+    right_ins=getIntersection(node->right, ray);//与右box求交
     return left_ins.distance < right_ins.distance ? left_ins: right_ins;//返回最近交点
 }
