@@ -88,7 +88,9 @@ inline Vector3f crossProduct(const Vector3f &a, const Vector3f &b)
             a.x * b.y - a.y * b.x
     );
 }
-
+inline float distance(const Vector3f& a, const Vector3f& b) {
+    return std::sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y)+ (a.z - b.z) * (a.z - b.z));
+}
 
 
 #endif //RAYTRACING_VECTOR_H

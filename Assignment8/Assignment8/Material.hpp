@@ -15,7 +15,7 @@ private:
     // Compute reflection direction
     Vector3f reflect(const Vector3f &I, const Vector3f &N) const
     {
-        return I - 2 * dotProduct(I, N) * N;
+        return I - 2 * dotProduct(I, N) * N;//为什么这里不是反过来的？
     }
 
     // Compute refraction direction using Snell's law
@@ -145,7 +145,7 @@ Vector3f Material::sample(const Vector3f &wi, const Vector3f &N){
     }
 }
 
-float Material::pdf(const Vector3f &wi, const Vector3f &wo, const Vector3f &N){
+float Material::pdf(const Vector3f &wi, const Vector3f &wo, const Vector3f &N){//生成这个方向的概率密度函数
     switch(m_type){
         case DIFFUSE:
         {
@@ -159,11 +159,11 @@ float Material::pdf(const Vector3f &wi, const Vector3f &wo, const Vector3f &N){
     }
 }
 
-Vector3f Material::eval(const Vector3f &wi, const Vector3f &wo, const Vector3f &N){
+Vector3f Material::eval(const Vector3f &wi, const Vector3f &wo, const Vector3f &N){//BRDF的值
     switch(m_type){
         case DIFFUSE:
         {
-            // calculate the contribution of diffuse   model
+            // calculate the contribution of diffuse model,Lambert's model
             float cosalpha = dotProduct(N, wo);
             if (cosalpha > 0.0f) {
                 Vector3f diffuse = Kd / M_PI;

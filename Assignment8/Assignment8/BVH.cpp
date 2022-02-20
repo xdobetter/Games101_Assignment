@@ -45,7 +45,6 @@ BVHBuildNode* BVHAccel::recursiveBuild(std::vector<Object*> objects)
     else if (objects.size() == 2) {
         node->left = recursiveBuild(std::vector{objects[0]});
         node->right = recursiveBuild(std::vector{objects[1]});
-
         node->bounds = Union(node->left->bounds, node->right->bounds);
         node->area = node->left->area + node->right->area;
         return node;
@@ -108,7 +107,16 @@ Intersection BVHAccel::Intersect(const Ray& ray) const
 Intersection BVHAccel::getIntersection(BVHBuildNode* node, const Ray& ray) const
 {
     // TODO Traverse the BVH to find intersection
-
+    Intersection left_ins, right_ins;
+    std::array<int, 3> dirIsNeg;
+    dirIsNeg[0] = int(ray.direction.x > 0);
+    dirIsNeg[1] = int(ray.direction.y > 0);
+    dirIsNeg[2] = int(ray.direction.z > 0);
+    if (node->bounds.IntersectP(ray,ray.direction_inv,dirIsNeg)) return left_ins;// 如果ray与node的bbox不相交
+    if (!node->left && !node->right) return node->object->getIntersection(ray);//如果相交，且该结点为叶子结点
+    left_ins = getIntersection(node->left, ray);
+    right_ins = getIntersection(node->right, ray);
+    return left_ins.distance < right_ins.distance ? left_ins : right_ins;
 }
 
 

@@ -37,24 +37,25 @@ public:
     void buildBVH();
     Vector3f castRay(const Ray &ray, int depth) const;
     void sampleLight(Intersection &pos, float &pdf) const;
-    bool trace(const Ray &ray, const std::vector<Object*> &objects, float &tNear, uint32_t &index, Object **hitObject);
+    bool trace(const Ray &ray, const std::vector<Object*> &objects, float &tNear, uint32_t &index, Object **hitObject);//根本没被用到！在什么时候会用呢？
     std::tuple<Vector3f, Vector3f> HandleAreaLight(const AreaLight &light, const Vector3f &hitPoint, const Vector3f &N,
                                                    const Vector3f &shadowPointOrig,
                                                    const std::vector<Object *> &objects, uint32_t &index,
-                                                   const Vector3f &dir, float specularExponent);
+                                                   const Vector3f &dir, float specularExponent);//根本没被用到！在什么时候会用呢？
 
     // creating the scene (adding objects and lights)
     std::vector<Object* > objects;
     std::vector<std::unique_ptr<Light> > lights;
 
+
+	//为什么要在这个类下写这些呢？我不明白，这些根本没被用到
     // Compute reflection direction
     Vector3f reflect(const Vector3f &I, const Vector3f &N) const
     {
         return I - 2 * dotProduct(I, N) * N;
     }
 
-
-
+// 利用斯涅尔定律计算折射方向
 // Compute refraction direction using Snell's law
 //
 // We need to handle with care the two possible situations:
@@ -64,21 +65,23 @@ public:
 //    - When the ray is outside.
 //
 // If the ray is outside, you need to make cosi positive cosi = -N.I
-//
+// 如果射线在外面，需要让cos = -N.I
 // If the ray is inside, you need to invert the refractive indices and negate the normal N
-    Vector3f refract(const Vector3f &I, const Vector3f &N, const float &ior) const
+// 如果光线在里面，需要反转折射率，使N值为负
+
+    Vector3f refract(const Vector3f &I, const Vector3f &N, const float &ior) const//
     {
         float cosi = clamp(-1, 1, dotProduct(I, N));
-        float etai = 1, etat = ior;
+        float etai = 1, etat = ior;//默认是从空气中打到其他介质中
         Vector3f n = N;
-        if (cosi < 0) { cosi = -cosi; } else { std::swap(etai, etat); n= -N; }
+        if (cosi < 0) { cosi = -cosi; } else { std::swap(etai, etat); n= -N; }//这是不是一些hack的做法呢？
         float eta = etai / etat;
         float k = 1 - eta * eta * (1 - cosi * cosi);
         return k < 0 ? 0 : eta * I + (eta * cosi - sqrtf(k)) * n;
     }
 
 
-
+//计算菲涅耳方程
     // Compute Fresnel equation
 //
 // \param I is the incident view direction
@@ -87,7 +90,7 @@ public:
 //
 // \param ior is the material refractive index
 //
-// \param[out] kr is the amount of light reflected
+// \param[out] kr is the amount of light reflected Kr是反射光的量
     void fresnel(const Vector3f &I, const Vector3f &N, const float &ior, float &kr) const
     {
         float cosi = clamp(-1, 1, dotProduct(I, N));
@@ -104,9 +107,10 @@ public:
             cosi = fabsf(cosi);
             float Rs = ((etat * cosi) - (etai * cost)) / ((etat * cosi) + (etai * cost));
             float Rp = ((etai * cosi) - (etat * cost)) / ((etai * cosi) + (etat * cost));
-            kr = (Rs * Rs + Rp * Rp) / 2;
+            kr = (Rs * Rs + Rp * Rp) / 2;//为什么这里Rs,Rp都进行了相乘操作?
         }
         // As a consequence of the conservation of energy, transmittance is given by:
+        // 由于能量守恒，透过率等于:
         // kt = 1 - kr;
     }
 };

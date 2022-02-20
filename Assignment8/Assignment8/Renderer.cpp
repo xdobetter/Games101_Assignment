@@ -7,7 +7,7 @@
 #include "Renderer.hpp"
 
 
-inline float deg2rad(const float& deg) { return deg * M_PI / 180.0; }
+inline float deg2rad(const float& deg) { return deg * M_PI / 180.0; }//转为弧度
 
 const float EPSILON = 0.00001;
 
@@ -20,21 +20,23 @@ void Renderer::Render(const Scene& scene)
 
     float scale = tan(deg2rad(scene.fov * 0.5));
     float imageAspectRatio = scene.width / (float)scene.height;
-    Vector3f eye_pos(278, 273, -800);
+    Vector3f eye_pos(278, 273, -800);//origin
     int m = 0;
 
     // change the spp value to change sample ammount
-    int spp = 16;
+    int spp = 16;//spp数  
     std::cout << "SPP: " << spp << "\n";
     for (uint32_t j = 0; j < scene.height; ++j) {
         for (uint32_t i = 0; i < scene.width; ++i) {
             // generate primary ray direction
+            //Uniformly choose N sample positions within the pixel
+            //这里每次采样位置都是同样的位置
             float x = (2 * (i + 0.5) / (float)scene.width - 1) *
                       imageAspectRatio * scale;
             float y = (1 - 2 * (j + 0.5) / (float)scene.height) * scale;
 
-            Vector3f dir = normalize(Vector3f(-x, y, 1));
-            for (int k = 0; k < spp; k++){
+            Vector3f dir = normalize(Vector3f(-x, y, 1));//这里x为什么取了一个-?
+            for (int k = 0; k < spp; k++){//这里对每条光路都取同样的贡献权值
                 framebuffer[m] += scene.castRay(Ray(eye_pos, dir), 0) / spp;  
             }
             m++;
