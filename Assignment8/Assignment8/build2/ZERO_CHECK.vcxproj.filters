@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment8\Assignment8\build2\CMakeFiles\8cd1e6f3587e34176f126f2860aa887d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{58CED1D7-B456-3ABC-A307-680EC4A345FC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
