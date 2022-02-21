@@ -56,47 +56,56 @@ bool Scene::trace(
 
     return (*hitObject != nullptr);
 }
+Vector3f Scene::shading(const Intersection& p_inter, Vector3f wo) const {//wo入射方向，从p点向外射出
+    Vector3f L_dir = 0.0, L_indir = 0.0;
+    //###sample light###
+	Intersection x_inter;
+	//float pdf_light = get_random_float();//错误，不是自己生成的，是通过sampleLight函数来获得该值
+	float pdf_light = 0.0f;
+	sampleLight(x_inter, pdf_light);//sample light
+	//Get x, ws , nn , emit from x_inter
+	Vector3f x = x_inter.coords;
+	Vector3f ws = x - p_inter.coords;
+	Vector3f nn = x_inter.normal;
+	Vector3f n = p_inter.normal;
+	Vector3f emit = x_inter.emit;
+    wo= wo.normalized();//wo是射入p点
+    ws= ws.normalized();//ws是从p点射出
+	Ray p2x_ray(p_inter.coords, ws);//生成一根打向光源的射线，判断是否会与光源相交
+	Intersection temp_inter = this->intersect(p2x_ray);
+	if (abs(distance(temp_inter.coords, p_inter.coords) - distance(x,p_inter.coords)) < 10e-4) {//如果之间没有被遮挡，计算直接光照的结果
+		Vector3f eval=p_inter.m->eval(ws, wo, n);
+        L_dir = emit * eval * dotProduct(ws, n) * dotProduct(-ws, nn) / std::pow(distance(p_inter.coords, x),2) / pdf_light;
+	}
+	//###sample hamisphere###
+	float p_rr = get_random_float();//Test Russian Roulette with probability RussianRoulette
+	if (p_rr < RussianRoulette) {
+		Vector3f wi = p_inter.m->sample(-wo, n);//对该点sample一个方向,-wo表示射入到p点的方向,wi则表示从p点打出
+		wi=wi.normalized();
+        Ray ray(p_inter.coords, wi);
+		Intersection inter = this->intersect(ray);
+		Vector3f temp_vec = Vector3f();
+		if (inter.happened && inter.emit == temp_vec) {//如果能够有交点，且相交的不是光源
+            Vector3f eval=p_inter.m->eval(wi,wo,n);
+			L_indir = eval * shading(inter, -wi) * dotProduct(n, wi) / p_inter.m->pdf(wi, wo, n) / RussianRoulette;//这里wi方向需要取反，表示从inter点发出
+		}
+	}
+	return L_indir+L_dir;
+}
 
 // Implementation of Path Tracing
 Vector3f Scene::castRay(const Ray &ray, int depth) const
 {
     // TO DO Implement Path Tracing Algorithm here
-   
-	auto shading = [&](const Intersection& p_inter, const Vector3f& wo) {
-        Vector3f L_dir, L_indir;
-		//###sample light###
-		Intersection inter;
-		//float pdf_light = get_random_float();//错误，不是自己生成的，是通过sampleLight函数来获得该值
-        float pdf_light = 0.0f;
-		sampleLight(inter, pdf_light);
-		//Get x, ws , N , emit from inter
-		Vector3f x = inter.coords;
-		Vector3f ws = normalize(x - p_inter.coords);
-        Vector3f nn = inter.normal;
-		Vector3f n = p_inter.normal;
-		Vector3f emit = inter.emit;
-		Ray p2x_ray(p_inter.coords, normalize(x - p_inter.coords));//生成一根打向光源的射线，判断是否会与光源相交
-		Intersection temp_inter = this->intersect(p2x_ray);
-		if (distance(temp_inter.coords, p_inter.coords) - inter.distance < 10e-5) {//如果之间没有被遮挡，计算直接光照的结果
-            L_dir += emit * p_inter.m->eval(ws, wo, n) * dotProduct(ws, n) * dotProduct(ws, nn) / distance(p_inter.coords, x) / pdf_light;
-		}
-        //###sample hamisphere###
-        //Test Russian Roulette with probability RussianRoulette
-        float p_rr = get_random_float();
-        if (p_rr > RussianRoulette) return Vector3f();
-        Vector3f wi = p_inter.m->sample(wo, n);//对该点sample一个方向
-
-
-		return Vector3f();
-	};
-
     //计算当前交点
     Intersection inter = this->intersect(ray);
     //根据交点结果进行shading
     if (inter.happened) {
-        return shading(inter,ray.direction);
+        Vector3f wo=-ray.direction;
+        return inter.emit+shading(inter,wo);//Le+Lr
     }
     else {
         return Vector3f();
     } 
 }
+   

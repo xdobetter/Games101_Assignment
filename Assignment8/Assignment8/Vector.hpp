@@ -29,12 +29,16 @@ public:
     Vector3f operator + (const Vector3f &v) const { return Vector3f(x + v.x, y + v.y, z + v.z); }
     Vector3f operator - () const { return Vector3f(-x, -y, -z); }
     Vector3f& operator += (const Vector3f &v) { x += v.x, y += v.y, z += v.z; return *this; }
+    bool operator ==(const Vector3f& v) {
+        if (this->x == v.x && this->y == v.y && this->z == v.z) return true;
+        return false;
+    }
     friend Vector3f operator * (const float &r, const Vector3f &v)
     { return Vector3f(v.x * r, v.y * r, v.z * r); }
     friend std::ostream & operator << (std::ostream &os, const Vector3f &v)
     { return os << v.x << ", " << v.y << ", " << v.z; }
-    double       operator[](int index) const;
-    double&      operator[](int index);
+    double  operator[](int index) const;
+    double& operator[](int index);
 
 
     static Vector3f Min(const Vector3f &p1, const Vector3f &p2) {
