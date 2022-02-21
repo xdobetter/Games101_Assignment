@@ -253,13 +253,14 @@ inline Intersection Triangle::getIntersection(Ray ray)
     t_tmp = dotProduct(e2, qvec) * det_inv;
 
     // TODO find ray triangle intersection
-    if (t_tmp < 0) return inter;//t<0直接终止
+    if (t_tmp <= 0) return inter;//t<0直接终止 t=0需要算吗？之前加上了t=0
     inter.happened = true;
-    inter.coords = ray.origin + t_tmp * ray.direction;//交点坐标
+    inter.coords = ray(t_tmp);//交点坐标
     inter.normal = normal;
     inter.distance = t_tmp;
     inter.obj = this;
     inter.m = this->m;
+    inter.emit=m->getEmission();//如果这里是光源要加上自发光，否则绘制会发现没有光源
 
     return inter;
 }

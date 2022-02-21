@@ -41,10 +41,10 @@ void Renderer::Render(const Scene& scene)
 
             Vector3f dir = normalize(Vector3f(-x, y, 1));//这里x为什么取了一个-?
             for (int k = 0; k < spp; k++){//这里对每条光路都取同样的贡献权值
-                //framebuffer[j*scene.width+i] += scene.castRay(Ray(eye_pos, dir), 0) / spp;
-                framebuffer[m]+=scene.castRay(Ray(eye_pos,dir),0)/spp;
+                framebuffer[j*scene.width+i] += scene.castRay(Ray(eye_pos, dir), 0) / spp;
+                //framebuffer[m]+=scene.castRay(Ray(eye_pos,dir),0)/spp;
             }
-            m++;
+            //m++;
         }
         if(idx==0){
             count++;
