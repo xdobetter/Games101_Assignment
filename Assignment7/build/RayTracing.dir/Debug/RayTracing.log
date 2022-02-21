@@ -1,21 +1,4 @@
-﻿  BVH.cpp
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Vector.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(19,46): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(21,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(45,13): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(16,68): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(16,52): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(16,36): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(22,65): warning C4244: “参数”: 从“double”转换到“const float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(20,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(20,33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(20,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(21,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(21,33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(21,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Intersection.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  Renderer.cpp
+﻿  Renderer.cpp
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Vector.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -38,60 +21,9 @@ D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Sc
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(10,60): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(12,30): warning C4305: “初始化”: 从“double”到“float”截断
 D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(21,41): warning C4244: “参数”: 从“double”转换到“const float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(29,28): warning C4018: “<”: 有符号/无符号不匹配
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(30,32): warning C4018: “<”: 有符号/无符号不匹配
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(32,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(34,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(38,73): warning C4244: “参数”: 从“int”转换到“const float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(47,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Scene.cpp
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Scene.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Vector.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(19,46): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(21,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(45,13): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(16,68): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(16,52): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(16,36): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(22,65): warning C4244: “参数”: 从“double”转换到“const float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(20,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(20,33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(20,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(21,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(21,33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(21,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Intersection.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Scene.hpp(23,30): warning C4305: “参数”: 从“double”到“float”截断
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Scene.hpp(25,27): warning C4305: “初始化”: 从“double”到“float”截断
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Scene.cpp(75,19): warning C4305: “初始化”: 从“double”到“float”截断
-  main.cpp
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Vector.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(19,46): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(21,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\global.hpp(45,13): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(16,68): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(16,52): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(16,36): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Ray.hpp(22,65): warning C4244: “参数”: 从“double”转换到“const float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(20,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(20,33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(20,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(21,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(21,33): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Bounds3.hpp(21,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Intersection.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Scene.hpp(23,30): warning C4305: “参数”: 从“double”到“float”截断
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Scene.hpp(25,27): warning C4305: “初始化”: 从“double”到“float”截断
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\OBJ_Loader.hpp(944,33): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Triangle.hpp(96,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Triangle.hpp(97,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Triangle.hpp(184,23): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Triangle.hpp(187,1): warning C4305: “参数”: 从“double”到“float”截断
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Sphere.hpp(81,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-  正在生成代码...
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Material.hpp(177): warning C4715: “Material::eval”: 不是所有的控件路径都返回值
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Material.hpp(146): warning C4715: “Material::sample”: 不是所有的控件路径都返回值
-D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Material.hpp(160): warning C4715: “Material::pdf”: 不是所有的控件路径都返回值
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(33,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(35,21): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(39,73): warning C4244: “参数”: 从“int”转换到“const float”，可能丢失数据
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(48,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\Renderer.cpp(41): warning C4700: 使用了未初始化的局部变量“m”
   RayTracing.vcxproj -> D:\CADCG\Selfstudy_Course\Games101\Assignment\Games101_Assignment\Assignment7\build\Debug\RayTracing.exe

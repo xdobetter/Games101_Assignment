@@ -33,15 +33,15 @@ int main(int argc, char** argv)
     MeshTriangle light_("../models/cornellbox/light.obj", light);
 
     scene.Add(&floor);
-    //scene.Add(&shortbox);
-    //scene.Add(&tallbox);
+    scene.Add(&shortbox);
+    scene.Add(&tallbox);
     scene.Add(&left);
     scene.Add(&right);
     scene.Add(&light_);
-    MeshTriangle bunny("../models/bunny/bunny.obj",white);
+   // MeshTriangle bunny("../models/bunny/bunny.obj",white);
     //MeshTriangle light_("../models/cornellbox/light.obj", light);
-    scene.Add(&bunny);
-    scene.Add(&light_);
+    //scene.Add(&bunny);
+    //scene.Add(&light_);
     scene.buildBVH();
 
     Renderer r;

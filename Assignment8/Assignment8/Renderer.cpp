@@ -5,6 +5,7 @@
 #include <fstream>
 #include "Scene.hpp"
 #include "Renderer.hpp"
+#include <omp.h>
 
 inline float deg2rad(const float& deg) { return deg * M_PI / 180.0; }//转为弧度
 
@@ -23,9 +24,13 @@ void Renderer::Render(const Scene& scene)
     int m = 0;
 
     // change the spp value to change sample ammount
-    int spp = 20;//spp数
+    int spp = 100;//spp数
+    int count=0;
     std::cout << "SPP: " << spp << "\n";
+#pragma omp parallel for //简易并行，每个线程任务量为一个width
     for (uint32_t j = 0; j < scene.height; ++j) {
+        //std::cout<<"j="<<j<<std::endl;
+        auto idx=omp_get_thread_num();
         for (uint32_t i = 0; i < scene.width; ++i) {
             // generate primary ray direction
             //Uniformly choose N sample positions within the pixel
@@ -36,11 +41,18 @@ void Renderer::Render(const Scene& scene)
 
             Vector3f dir = normalize(Vector3f(-x, y, 1));//这里x为什么取了一个-?
             for (int k = 0; k < spp; k++){//这里对每条光路都取同样的贡献权值
-                framebuffer[m] += scene.castRay(Ray(eye_pos, dir), 0) / spp;
+                //framebuffer[j*scene.width+i] += scene.castRay(Ray(eye_pos, dir), 0) / spp;
+                framebuffer[m]+=scene.castRay(Ray(eye_pos,dir),0)/spp;
             }
             m++;
         }
-        UpdateProgress(j / (float)scene.height);
+        if(idx==0){
+            count++;
+            //UpdateProgress(j / (float)scene.height);
+            //std::cout<<"omp_get_num_threads()="<<omp_get_num_threads()<<"  count="<<count<<std::endl;
+            //std::cout<<"count/(float)scene.height/(float)omp_get_num_threads()="<<count/((float)scene.height/(float)omp_get_num_threads())<<std::endl;
+            UpdateProgress(count/((float)scene.height/(float)omp_get_num_threads()));//只通过线程0，处理进度条，通过统计线程0处理的任务数，来更新进度条
+        }
     }
     UpdateProgress(1.f);
     // save framebuffer to file

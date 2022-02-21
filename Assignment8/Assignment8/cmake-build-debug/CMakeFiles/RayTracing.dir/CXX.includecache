@@ -81,6 +81,8 @@ Scene.hpp
 /mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment8/Assignment8/Scene.hpp
 Renderer.hpp
 /mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment8/Assignment8/Renderer.hpp
+omp.h
+-
 
 /mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment8/Assignment8/Renderer.hpp
 Scene.hpp

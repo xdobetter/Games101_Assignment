@@ -5,7 +5,7 @@
 #include <fstream>
 #include "Scene.hpp"
 #include "Renderer.hpp"
-
+#include <omp.h>
 
 inline float deg2rad(const float& deg) { return deg * M_PI / 180.0; }
 
@@ -26,8 +26,9 @@ void Renderer::Render(const Scene& scene)
     // change the spp value to change sample ammount
     int spp = 1;
     std::cout << "SPP: " << spp << "\n";
-    for (uint32_t j = 0; j < scene.height; ++j) {
-        for (uint32_t i = 0; i < scene.width; ++i) {
+//#pragma omp parallel for schedule(dynamic,1) private(m)
+    for (int j = 0; j < scene.height; ++j) {
+        for (int i = 0; i < scene.width; ++i) {
             // generate primary ray direction
             float x = (2 * (i + 0.5) / (float)scene.width - 1) *
                       imageAspectRatio * scale;
