@@ -64,36 +64,78 @@ Vector3f Scene::castRay(const Ray &ray, int depth) const
     Intersection cur_hit=this->intersect(ray);//该光线与场景求交
     if(cur_hit.happened){//存在交点，则对该点进行着色
         Vector3f wo= -normalize(ray.direction);
-        return cur_hit.emit+shade(cur_hit,wo);
+        return cur_hit.emit+shading(cur_hit,wo);
     }else{
         return Vector3f();
     }
 }
-Vector3f Scene::shade( Intersection &p, Vector3f wo) const {//着色函数
-    Vector3f L_dir=0.0,L_indir=0.0;
-    Intersection x;//光源上的采样点
-    float ep=0.001;
-    float pdf_light=0.0;
-    sampleLight(x,pdf_light);//对光源采样
-    Ray p_to_x(p.coords,x.coords-p.coords);//生成从p点发射到光源采样点x的光源
-    Intersection temp_hit= this->intersect(p_to_x);//从p点发射一根光线到光源采样点x
-    if(abs(distance(p.coords,temp_hit.coords)- distance(p.coords,x.coords))<ep){//如果p点到光源采样点x之间没有其他物体
-        Vector3f wi=p_to_x.direction;
-        Vector3f Np=p.normal;
-        Vector3f Nx=x.normal;
-        L_dir=x.emit*p.m->eval(wi.normalized(),wo.normalized(),Np)* dotProduct(Np,wi.normalized())* dotProduct(Nx,-wi.normalized())/ distance_2(p.coords,x.coords)/pdf_light;
-    }
-    float p_rr=get_random_float();
-    if(p_rr<RussianRoulette) {
-        Vector3f wi=p.m->sample(-wo.normalized(),p.normal);//在半球上均匀采样
-        Ray ray(p.coords,wi.normalized());
-        Intersection hit=this->intersect(ray);
-        Vector3f temp;
-        if(hit.happened&&hit.emit==temp){
-            //to do
-            Vector3f Np=p.normal;
-            L_indir=p.m->eval(wi.normalized(),wo.normalized(),Np)* shade(hit,-wi.normalized())* dotProduct(Np,wi.normalized())/p.m->pdf(wi.normalized(),wo.normalized(),Np)/RussianRoulette;
-        }
-    }
-    return L_dir+L_indir;
+
+//A8绘制
+Vector3f Scene::shading(const Intersection& p_inter, Vector3f wo) const {//wo入射方向，从p点向外射出
+    Vector3f L_dir = 0.0, L_indir = 0.0;
+    //###sample light###
+	Intersection x_inter;
+	//float pdf_light = get_random_float();//错误，不是自己生成的，是通过sampleLight函数来获得该值
+	float pdf_light = 0.0f;
+	sampleLight(x_inter, pdf_light);//sample light
+	//Get x, ws , nn , emit from x_inter
+	Vector3f x = x_inter.coords;
+	Vector3f ws = x - p_inter.coords;
+	Vector3f nn = x_inter.normal;
+	Vector3f n = p_inter.normal;
+	Vector3f emit = x_inter.emit;
+    wo= wo.normalized();//wo是射入p点
+    ws= ws.normalized();//ws是从p点射出
+	Ray p2x_ray(p_inter.coords, ws);//生成一根打向光源的射线，判断是否会与光源相交
+	Intersection temp_inter = this->intersect(p2x_ray);
+	if (abs(distance(temp_inter.coords, p_inter.coords) - distance(x,p_inter.coords)) < EPSILON) {//如果之间没有被遮挡，计算直接光照的结果
+		Vector3f eval=p_inter.m->eval(ws, wo, n);
+        L_dir = emit * eval * dotProduct(ws, n) * dotProduct(-ws, nn) / std::pow(distance(p_inter.coords, x),2) / (pdf_light);
+	}
+	//###sample hamisphere###
+	float p_rr = get_random_float();//Test Russian Roulette with probability RussianRoulette
+	if (p_rr < RussianRoulette) {
+		Vector3f wi = p_inter.m->sample(-wo, n);//对该点sample一个方向,-wo表示射入到p点的方向,wi则表示从p点打出
+		wi=wi.normalized();
+        Ray ray(p_inter.coords, wi);
+		Intersection inter = this->intersect(ray);
+		Vector3f temp_vec = Vector3f();
+		if (inter.happened && inter.emit == temp_vec) {//如果能够有交点，且相交的不是光源
+            Vector3f eval=p_inter.m->eval(wi,wo,n);
+			L_indir = eval * shading(inter, -wi) * dotProduct(n, wi) / (p_inter.m->pdf(wi, wo, n)) / RussianRoulette;//这里wi方向需要取反，表示从inter点发出
+		}
+	}
+	return L_indir+L_dir;
 }
+
+
+
+//A7绘制
+//Vector3f Scene::shade(const  Intersection &p, Vector3f wo) const {//着色函数
+//    Vector3f L_dir=0.0,L_indir=0.0;
+//    Intersection x;//光源上的采样点
+//    float ep=0.001;
+//    float pdf_light=0.0;
+//    sampleLight(x,pdf_light);//对光源采样
+//    Ray p_to_x(p.coords,x.coords-p.coords);//生成从p点发射到光源采样点x的光源
+//    Intersection temp_hit= this->intersect(p_to_x);//从p点发射一根光线到光源采样点x
+//    if(abs(distance(p.coords,temp_hit.coords)- distance(p.coords,x.coords))<ep){//如果p点到光源采样点x之间没有其他物体
+//        Vector3f wi=p_to_x.direction;
+//        Vector3f Np=p.normal;
+//        Vector3f Nx=x.normal;
+//        L_dir=x.emit*p.m->eval(wi.normalized(),wo.normalized(),Np)* dotProduct(Np,wi.normalized())* dotProduct(Nx,-wi.normalized())/ distance_2(p.coords,x.coords)/pdf_light;
+//    }
+//    float p_rr=get_random_float();
+//    if(p_rr<RussianRoulette) {
+//        Vector3f wi=p.m->sample(-wo.normalized(),p.normal);//在半球上均匀采样
+//        Ray ray(p.coords,wi.normalized());
+//        Intersection hit=this->intersect(ray);
+//        Vector3f temp;
+//        if(hit.happened&&hit.emit==temp){
+//            //to do
+//            Vector3f Np=p.normal;
+//            L_indir=p.m->eval(wi.normalized(),wo.normalized(),Np)* shade(hit,-wi.normalized())* dotProduct(Np,wi.normalized())/p.m->pdf(wi.normalized(),wo.normalized(),Np)/RussianRoulette;
+//        }
+//    }
+//    return L_dir+L_indir;
+//}

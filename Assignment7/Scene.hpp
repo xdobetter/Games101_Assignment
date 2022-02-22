@@ -42,7 +42,7 @@ public:
                                                    const Vector3f &shadowPointOrig,
                                                    const std::vector<Object *> &objects, uint32_t &index,
                                                    const Vector3f &dir, float specularExponent);
-    Vector3f shade(Intersection &p,Vector3f wo) const;
+    Vector3f shading(const Intersection &p,Vector3f wo) const;
     // creating the scene (adding objects and lights)
     std::vector<Object* > objects;
     std::vector<std::unique_ptr<Light> > lights;
