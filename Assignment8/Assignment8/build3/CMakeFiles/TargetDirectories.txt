@@ -1,3 +1,0 @@
-/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment8/Assignment8/build3/CMakeFiles/rebuild_cache.dir
-/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment8/Assignment8/build3/CMakeFiles/edit_cache.dir
-/mnt/d/CADCG/Selfstudy_Course/Games101/Assignment/Games101_Assignment/Assignment8/Assignment8/build3/CMakeFiles/RayTracing.dir

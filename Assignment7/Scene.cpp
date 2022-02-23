@@ -52,8 +52,6 @@ bool Scene::trace(
             index = indexK;
         }
     }
-
-
     return (*hitObject != nullptr);
 }
 

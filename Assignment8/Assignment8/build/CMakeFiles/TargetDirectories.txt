@@ -1,3 +1,0 @@
-D:/CADCG/Selfstudy_Course/Games101/Assignment/PA7-1/PA7/Assignment7/build/CMakeFiles/RayTracing.dir
-D:/CADCG/Selfstudy_Course/Games101/Assignment/PA7-1/PA7/Assignment7/build/CMakeFiles/ALL_BUILD.dir
-D:/CADCG/Selfstudy_Course/Games101/Assignment/PA7-1/PA7/Assignment7/build/CMakeFiles/ZERO_CHECK.dir

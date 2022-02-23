@@ -9,8 +9,8 @@
 
 inline float deg2rad(const float& deg) { return deg * M_PI / 180.0; }
 
-const float EPSILON = 0.00001;
-//const float EPSILON = 0.001;//绘制正常
+//const float EPSILON = 0.00001;
+const float EPSILON = 0.001;//绘制正常
 // The main render function. This where we iterate over all pixels in the image,
 // generate primary rays and cast these rays into the scene. The content of the
 // framebuffer is saved to a file.
@@ -24,10 +24,10 @@ void Renderer::Render(const Scene& scene)
     int m = 0;
 
     // change the spp value to change sample ammount
-    int spp = 16;
+    int spp = 1;
     std::cout << "SPP: " << spp << "\n";
     int count = 0;
-    #pragma omp parallel for 
+    //#pragma omp parallel for 
     for (int j = 0; j < scene.height; ++j) {
         auto idx = omp_get_thread_num();
         for (int i = 0; i < scene.width; ++i) {
@@ -40,16 +40,16 @@ void Renderer::Render(const Scene& scene)
             for (int k = 0; k < spp; k++) {
                 framebuffer[j*scene.width+i] +=scene.castRay(Ray(eye_pos, dir), 0) / spp;
             }
-            /*for (int k = 0; k < spp; k++){
-                framebuffer[m] += scene.castRay(Ray(eye_pos, dir), 0) / spp;  
-            }
-            m++;*/
+			for (int k = 0; k < spp; k++) {
+				framebuffer[m] += scene.castRay(Ray(eye_pos, dir), 0) / spp;
+			}
+			m++;
         }
-        if (idx == 0) {
-            count++;
-            UpdateProgress(count / (scene.height / (float)omp_get_num_threads()));
-        }
-        //UpdateProgress(j / (float)scene.height);//更新进度条
+		/*   if (idx == 0) {
+			   count++;
+			   UpdateProgress(count / (scene.height / (float)omp_get_num_threads()));
+		   }*/
+        UpdateProgress(j / (float)scene.height);//更新进度条
     }
     UpdateProgress(1.f);
 
